@@ -67,8 +67,10 @@
   <ItemGroup>
     <Compile Include="Entities\Adviser.cs" />
     <Compile Include="Entities\Coach.cs" />
+    <Compile Include="Entities\Company.cs" />
     <Compile Include="Entities\Contact.cs" />
     <Compile Include="Entities\Coordinator.cs" />
+    <Compile Include="Entities\Major.cs" />
     <Compile Include="Entities\Student.cs" />
     <Compile Include="Entities\Time.cs" />
     <Compile Include="Form1.cs">
