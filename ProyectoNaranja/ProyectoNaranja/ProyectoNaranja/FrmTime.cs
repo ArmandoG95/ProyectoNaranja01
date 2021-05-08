@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ProyectoNaranja
 {
-    public partial class FrmTime : Form
+    public partial class FrmTime : MetroFramework.Forms.MetroForm
     {
         public FrmTime()
         {
