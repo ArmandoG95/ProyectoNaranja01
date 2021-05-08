@@ -83,6 +83,12 @@
     <Compile Include="FrmCoach.Designer.cs">
       <DependentUpon>FrmCoach.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCompany.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCompany.Designer.cs">
+      <DependentUpon>FrmCompany.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmContact.cs">
       <SubType>Form</SubType>
     </Compile>
