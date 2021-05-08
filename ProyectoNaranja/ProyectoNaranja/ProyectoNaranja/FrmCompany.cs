@@ -10,7 +10,7 @@ using System.Windows.Forms;
 
 namespace ProyectoNaranja
 {
-    public partial class FrmCompany : Form
+    public partial class FrmCompany : MetroFramework.Forms.MetroForm
     {
         public FrmCompany()
         {
