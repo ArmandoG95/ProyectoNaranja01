@@ -89,6 +89,12 @@
     <Compile Include="FrmContact.Designer.cs">
       <DependentUpon>FrmContact.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCoordinator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCoordinator.Designer.cs">
+      <DependentUpon>FrmCoordinator.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmMajor.cs">
       <SubType>Form</SubType>
     </Compile>
