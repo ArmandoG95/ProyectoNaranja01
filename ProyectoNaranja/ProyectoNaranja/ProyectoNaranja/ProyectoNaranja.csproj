@@ -132,6 +132,38 @@
     <Compile Include="Migrations\202105112021080_Inicio.designer.cs">
       <DependentUpon>202105112021080_Inicio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105112055072_Adviser.cs" />
+    <Compile Include="Migrations\202105112055072_Adviser.designer.cs">
+      <DependentUpon>202105112055072_Adviser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105112104200_Coach.cs" />
+    <Compile Include="Migrations\202105112104200_Coach.designer.cs">
+      <DependentUpon>202105112104200_Coach.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105112104580_Company.cs" />
+    <Compile Include="Migrations\202105112104580_Company.designer.cs">
+      <DependentUpon>202105112104580_Company.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105112105449_Contact.cs" />
+    <Compile Include="Migrations\202105112105449_Contact.designer.cs">
+      <DependentUpon>202105112105449_Contact.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105112106360_Coordinator.cs" />
+    <Compile Include="Migrations\202105112106360_Coordinator.designer.cs">
+      <DependentUpon>202105112106360_Coordinator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105112107146_Major.cs" />
+    <Compile Include="Migrations\202105112107146_Major.designer.cs">
+      <DependentUpon>202105112107146_Major.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105112108014_Studentn.cs" />
+    <Compile Include="Migrations\202105112108014_Studentn.designer.cs">
+      <DependentUpon>202105112108014_Studentn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105112108334_Time.cs" />
+    <Compile Include="Migrations\202105112108334_Time.designer.cs">
+      <DependentUpon>202105112108334_Time.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -158,6 +190,30 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202105112021080_Inicio.resx">
       <DependentUpon>202105112021080_Inicio.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105112055072_Adviser.resx">
+      <DependentUpon>202105112055072_Adviser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105112104200_Coach.resx">
+      <DependentUpon>202105112104200_Coach.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105112104580_Company.resx">
+      <DependentUpon>202105112104580_Company.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105112105449_Contact.resx">
+      <DependentUpon>202105112105449_Contact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105112106360_Coordinator.resx">
+      <DependentUpon>202105112106360_Coordinator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105112107146_Major.resx">
+      <DependentUpon>202105112107146_Major.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105112108014_Studentn.resx">
+      <DependentUpon>202105112108014_Studentn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105112108334_Time.resx">
+      <DependentUpon>202105112108334_Time.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
