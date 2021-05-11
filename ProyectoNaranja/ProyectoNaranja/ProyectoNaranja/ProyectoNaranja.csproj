@@ -65,7 +65,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataContext.cs" />
     <Compile Include="Entities\Adviser.cs" />
     <Compile Include="Entities\Coach.cs" />
     <Compile Include="Entities\Company.cs" />
@@ -137,8 +136,8 @@
     <EmbeddedResource Include="FrmAdviser.resx">
       <DependentUpon>FrmAdviser.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmCoach.resx">
-      <DependentUpon>FrmCoach.cs</DependentUpon>
+    <EmbeddedResource Include="FrmContact.resx">
+      <DependentUpon>FrmContact.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmMajor.resx">
       <DependentUpon>FrmMajor.cs</DependentUpon>
