@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 namespace ProyectoNaranja.Entities
 {
-    class Adviser
+    public class Adviser
     {
         #region
         [key]

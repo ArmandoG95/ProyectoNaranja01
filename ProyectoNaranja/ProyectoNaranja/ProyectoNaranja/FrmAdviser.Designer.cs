@@ -545,7 +545,7 @@
             this.Controls.Add(this.grdDatos);
             this.Controls.Add(this.pnlAdviser);
             this.Name = "FrmAdviser";
-            this.Text = "FrmAdviser";
+            this.Text = "Adviser";
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).EndInit();
             this.pnlAdviser.ResumeLayout(false);
             this.pnlAdviser.PerformLayout();
