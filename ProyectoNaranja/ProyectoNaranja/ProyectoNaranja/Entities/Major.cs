@@ -12,7 +12,7 @@ namespace ProyectoNaranja.Entities
         public string Name { get; set; }
         [Required]
         [StringLength(50)]
-        public string phoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         [StringLength(25)]
         public string Photo { get; set; }
         [StringLength(50)]

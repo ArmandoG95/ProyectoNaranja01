@@ -65,6 +65,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataContext.cs" />
     <Compile Include="Entities\Adviser.cs" />
     <Compile Include="Entities\Coach.cs" />
     <Compile Include="Entities\Company.cs" />

@@ -1,12 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace ProyectoNaranja.Entities
 {
-    class Coordinator
+   public class Coordinator
     {
+        #region
+        [Key]
+        public int ID { get; set; }
+        [Required]
+        [StringLength(30)]
+        public string FirstName { get; set; }
+        [StringLength(30)]
+        public string LastName { get; set; }
+        [StringLength(30)]
+        public string CellPhoneNumber { get; set; }
+        [StringLength(30)]
+        public string Email { get; set; }
+        [StringLength(30)]
+        public string Photo { get; set; }
+        public string FullName { get { return $"{FirstName} { LastName}"; } }
+        #endregion
     }
 }
