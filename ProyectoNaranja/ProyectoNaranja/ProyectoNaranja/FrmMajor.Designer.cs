@@ -29,9 +29,13 @@ namespace ProyectoNaranja
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblIabel = new MetroFramework.Controls.MetroLabel();
             this.txtId = new MetroFramework.Controls.MetroTextBox();
             this.pnlDatos = new MetroFramework.Controls.MetroPanel();
+            this.pctPhoto = new System.Windows.Forms.PictureBox();
             this.txtDescription = new MetroFramework.Controls.MetroTextBox();
             this.lblDescription = new MetroFramework.Controls.MetroLabel();
             this.txtEmail = new MetroFramework.Controls.MetroTextBox();
@@ -40,9 +44,16 @@ namespace ProyectoNaranja
             this.lblPhoneNumber = new MetroFramework.Controls.MetroLabel();
             this.txtName = new MetroFramework.Controls.MetroTextBox();
             this.lblName = new MetroFramework.Controls.MetroLabel();
-            this.pctPhoto = new System.Windows.Forms.PictureBox();
+            this.btnSearch = new MetroFramework.Controls.MetroButton();
+            this.btnEdit = new MetroFramework.Controls.MetroButton();
+            this.btnSave = new MetroFramework.Controls.MetroButton();
+            this.btnCancel = new MetroFramework.Controls.MetroButton();
+            this.btnAdd = new MetroFramework.Controls.MetroButton();
+            this.btnDelete = new MetroFramework.Controls.MetroButton();
+            this.grdDatos = new MetroFramework.Controls.MetroGrid();
             this.pnlDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctPhoto)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
             this.SuspendLayout();
             // 
             // lblIabel
@@ -86,6 +97,7 @@ namespace ProyectoNaranja
             // 
             // pnlDatos
             // 
+            this.pnlDatos.Controls.Add(this.btnSearch);
             this.pnlDatos.Controls.Add(this.pctPhoto);
             this.pnlDatos.Controls.Add(this.txtDescription);
             this.pnlDatos.Controls.Add(this.lblDescription);
@@ -107,6 +119,14 @@ namespace ProyectoNaranja
             this.pnlDatos.VerticalScrollbarBarColor = true;
             this.pnlDatos.VerticalScrollbarHighlightOnWheel = false;
             this.pnlDatos.VerticalScrollbarSize = 10;
+            // 
+            // pctPhoto
+            // 
+            this.pctPhoto.Location = new System.Drawing.Point(13, 36);
+            this.pctPhoto.Name = "pctPhoto";
+            this.pctPhoto.Size = new System.Drawing.Size(132, 141);
+            this.pctPhoto.TabIndex = 10;
+            this.pctPhoto.TabStop = false;
             // 
             // txtDescription
             // 
@@ -264,25 +284,123 @@ namespace ProyectoNaranja
             this.lblName.TabIndex = 2;
             this.lblName.Text = "Name:";
             // 
-            // pctPhoto
+            // btnSearch
             // 
-            this.pctPhoto.Location = new System.Drawing.Point(13, 36);
-            this.pctPhoto.Name = "pctPhoto";
-            this.pctPhoto.Size = new System.Drawing.Size(132, 141);
-            this.pctPhoto.TabIndex = 10;
-            this.pctPhoto.TabStop = false;
+            this.btnSearch.Location = new System.Drawing.Point(13, 190);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(131, 27);
+            this.btnSearch.TabIndex = 11;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseSelectable = true;
+            // 
+            // btnEdit
+            // 
+            this.btnEdit.Location = new System.Drawing.Point(78, 340);
+            this.btnEdit.Name = "btnEdit";
+            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.TabIndex = 3;
+            this.btnEdit.Text = "Edit";
+            this.btnEdit.UseSelectable = true;
+            // 
+            // btnSave
+            // 
+            this.btnSave.Location = new System.Drawing.Point(159, 340);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.TabIndex = 4;
+            this.btnSave.Text = "Save";
+            this.btnSave.UseSelectable = true;
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Location = new System.Drawing.Point(240, 340);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.TabIndex = 5;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseSelectable = true;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(321, 340);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.TabIndex = 6;
+            this.btnAdd.Text = "Add";
+            this.btnAdd.UseSelectable = true;
+            // 
+            // btnDelete
+            // 
+            this.btnDelete.Location = new System.Drawing.Point(402, 340);
+            this.btnDelete.Name = "btnDelete";
+            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.TabIndex = 7;
+            this.btnDelete.Text = "Delete";
+            this.btnDelete.UseSelectable = true;
+            // 
+            // grdDatos
+            // 
+            this.grdDatos.AllowUserToResizeRows = false;
+            this.grdDatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.grdDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.grdDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.grdDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.grdDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdDatos.DefaultCellStyle = dataGridViewCellStyle2;
+            this.grdDatos.EnableHeadersVisualStyles = false;
+            this.grdDatos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            this.grdDatos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            this.grdDatos.Location = new System.Drawing.Point(500, 76);
+            this.grdDatos.Name = "grdDatos";
+            this.grdDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.grdDatos.RowHeadersWidth = 51;
+            this.grdDatos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.grdDatos.RowTemplate.Height = 24;
+            this.grdDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.grdDatos.Size = new System.Drawing.Size(707, 286);
+            this.grdDatos.TabIndex = 8;
             // 
             // FrmMajor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1274, 450);
+            this.Controls.Add(this.grdDatos);
+            this.Controls.Add(this.btnDelete);
+            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.pnlDatos);
             this.Name = "FrmMajor";
             this.Text = "FrmMajor";
             this.pnlDatos.ResumeLayout(false);
             this.pnlDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctPhoto)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -301,5 +419,12 @@ namespace ProyectoNaranja
         private MetroFramework.Controls.MetroLabel lblName;
         private MetroFramework.Controls.MetroTextBox txtDescription;
         private System.Windows.Forms.PictureBox pctPhoto;
+        private MetroFramework.Controls.MetroButton btnSearch;
+        private MetroFramework.Controls.MetroButton btnEdit;
+        private MetroFramework.Controls.MetroButton btnSave;
+        private MetroFramework.Controls.MetroButton btnCancel;
+        private MetroFramework.Controls.MetroButton btnAdd;
+        private MetroFramework.Controls.MetroButton btnDelete;
+        private MetroFramework.Controls.MetroGrid grdDatos;
     }
 }
