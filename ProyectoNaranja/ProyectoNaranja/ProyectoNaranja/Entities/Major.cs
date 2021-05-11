@@ -1,12 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace ProyectoNaranja.Entities
 {
-    class Major
+    public class Major
     {
+        #region Propiedades Autoimplementadas
+        [Key]
+        public int Id { get; set; }
+        [Required]
+        [StringLength(30)]
+        public string Name { get; set; }
+        [Required]
+        [StringLength(50)]
+        public string phoneNumber { get; set; }
+        [StringLength(25)]
+        public string Photo { get; set; }
+        [StringLength(50)]
+        public string Email { get; set; }
+        [StringLength(150)]
+        public string Description { get; set; }
+        #endregion
     }
 }

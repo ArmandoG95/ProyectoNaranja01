@@ -70,7 +70,6 @@
     <Compile Include="Entities\Company.cs" />
     <Compile Include="Entities\Contact.cs" />
     <Compile Include="Entities\Coordinator.cs" />
-    <Compile Include="Entities\keyAttribute.cs" />
     <Compile Include="Entities\Major.cs" />
     <Compile Include="Entities\Student.cs" />
     <Compile Include="Entities\Time.cs" />
@@ -135,6 +134,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmAdviser.resx">
       <DependentUpon>FrmAdviser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCompany.resx">
+      <DependentUpon>FrmCompany.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmContact.resx">
       <DependentUpon>FrmContact.cs</DependentUpon>
