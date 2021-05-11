@@ -5,7 +5,7 @@ namespace ProyectoNaranja.Entities
     public class Coach
     {
         #region
-        [key]
+        [Key]
         public int ID { get; set; }
         [Required]
         [StringLength(30)]
@@ -17,7 +17,7 @@ namespace ProyectoNaranja.Entities
         [StringLength(30)]
         public string CellPhoneNumber { get; set; }
         [StringLength(30)]
-        public string Email { get; set; }
+        public string Correo { get; set; }
         [StringLength(30)]
         public string Photo { get; set; }
         public string FullName { get { return $"{FirstName} { LastName}"; } }

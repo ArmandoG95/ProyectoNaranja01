@@ -20,16 +20,15 @@ namespace ProyectoNaranja.Entities
         public string LastName { get; set; }
         [Required]
         [StringLength(30)]
-        public string phoneNumber { get; set; }
+        public string PhoneNumber { get; set; }
         [StringLength(250)]
-        public string cellphoneNumber { get; set; }
-        [StringLength(250)]
-        public int email { get; set; }
+        public string CellphoneNumber { get; set; }
+        
+        public int Correo { get; set; }
         [Required]
         [StringLength(30)]
         public string Photo { get; set; }
-        [StringLength(250)]
-        public int department { get; set; }
+        public int Department { get; set; }
         [Required]
         [StringLength(30)]
         public string FullName { get; }

@@ -15,8 +15,8 @@ namespace ProyectoNaranja.Entities
         public string PhoneNumber { get; set; }
         [StringLength(25)]
         public string Photo { get; set; }
-        [StringLength(50)]
-        public string Email { get; set; }
+       
+        public string Correo { get; set; }
         [StringLength(150)]
         public string Description { get; set; }
         #endregion
