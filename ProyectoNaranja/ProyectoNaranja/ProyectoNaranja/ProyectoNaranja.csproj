@@ -136,6 +136,9 @@
     <EmbeddedResource Include="FrmAdviser.resx">
       <DependentUpon>FrmAdviser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCoach.resx">
+      <DependentUpon>FrmCoach.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmContact.resx">
       <DependentUpon>FrmContact.cs</DependentUpon>
     </EmbeddedResource>
