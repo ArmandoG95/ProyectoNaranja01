@@ -128,6 +128,10 @@
     <Compile Include="FrmTime.Designer.cs">
       <DependentUpon>FrmTime.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105112021080_Inicio.cs" />
+    <Compile Include="Migrations\202105112021080_Inicio.designer.cs">
+      <DependentUpon>202105112021080_Inicio.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -151,6 +155,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTime.resx">
       <DependentUpon>FrmTime.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105112021080_Inicio.resx">
+      <DependentUpon>202105112021080_Inicio.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
