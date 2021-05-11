@@ -132,6 +132,9 @@
     <EmbeddedResource Include="FrmAdviser.resx">
       <DependentUpon>FrmAdviser.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmMajor.resx">
+      <DependentUpon>FrmMajor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
