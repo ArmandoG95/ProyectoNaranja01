@@ -164,6 +164,10 @@
     <Compile Include="Migrations\202105112108334_Time.designer.cs">
       <DependentUpon>202105112108334_Time.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105120332237_TestMig.cs" />
+    <Compile Include="Migrations\202105120332237_TestMig.designer.cs">
+      <DependentUpon>202105120332237_TestMig.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -215,6 +219,9 @@
     <EmbeddedResource Include="Migrations\202105112108334_Time.resx">
       <DependentUpon>202105112108334_Time.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105120332237_TestMig.resx">
+      <DependentUpon>202105120332237_TestMig.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -225,6 +232,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\ProyectoNaranja.Entities.Adviser.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
