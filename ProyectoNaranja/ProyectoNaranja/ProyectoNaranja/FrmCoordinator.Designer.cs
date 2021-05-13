@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -52,9 +53,18 @@
             this.lblID = new MetroFramework.Controls.MetroLabel();
             this.pctCoach = new System.Windows.Forms.PictureBox();
             this.grdAdviser = new MetroFramework.Controls.MetroGrid();
+            this.coordinatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cellPhoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.photoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlAdviser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctCoach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdAdviser)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coordinatorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bttSave
@@ -153,7 +163,7 @@
             this.txtEmail.CustomButton.UseSelectable = true;
             this.txtEmail.CustomButton.Visible = false;
             this.txtEmail.Lines = new string[0];
-            this.txtEmail.Location = new System.Drawing.Point(382, 197);
+            this.txtEmail.Location = new System.Drawing.Point(382, 183);
             this.txtEmail.MaxLength = 32767;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
@@ -183,7 +193,7 @@
             this.txtCellPhoneNumber.CustomButton.UseSelectable = true;
             this.txtCellPhoneNumber.CustomButton.Visible = false;
             this.txtCellPhoneNumber.Lines = new string[0];
-            this.txtCellPhoneNumber.Location = new System.Drawing.Point(382, 162);
+            this.txtCellPhoneNumber.Location = new System.Drawing.Point(382, 154);
             this.txtCellPhoneNumber.MaxLength = 32767;
             this.txtCellPhoneNumber.Name = "txtCellPhoneNumber";
             this.txtCellPhoneNumber.PasswordChar = '\0';
@@ -213,7 +223,7 @@
             this.txtPhoneNumber.CustomButton.UseSelectable = true;
             this.txtPhoneNumber.CustomButton.Visible = false;
             this.txtPhoneNumber.Lines = new string[0];
-            this.txtPhoneNumber.Location = new System.Drawing.Point(382, 125);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(382, 122);
             this.txtPhoneNumber.MaxLength = 32767;
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.PasswordChar = '\0';
@@ -321,7 +331,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(195, 197);
+            this.lblEmail.Location = new System.Drawing.Point(195, 186);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(42, 20);
             this.lblEmail.TabIndex = 8;
@@ -330,7 +340,7 @@
             // lblCellPhoneNumber
             // 
             this.lblCellPhoneNumber.AutoSize = true;
-            this.lblCellPhoneNumber.Location = new System.Drawing.Point(195, 162);
+            this.lblCellPhoneNumber.Location = new System.Drawing.Point(195, 154);
             this.lblCellPhoneNumber.Name = "lblCellPhoneNumber";
             this.lblCellPhoneNumber.Size = new System.Drawing.Size(132, 20);
             this.lblCellPhoneNumber.TabIndex = 7;
@@ -383,6 +393,7 @@
             // grdAdviser
             // 
             this.grdAdviser.AllowUserToResizeRows = false;
+            this.grdAdviser.AutoGenerateColumns = false;
             this.grdAdviser.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grdAdviser.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdAdviser.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -396,6 +407,15 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grdAdviser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grdAdviser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdAdviser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.iDDataGridViewTextBoxColumn,
+            this.firstNameDataGridViewTextBoxColumn,
+            this.lastNameDataGridViewTextBoxColumn,
+            this.cellPhoneNumberDataGridViewTextBoxColumn,
+            this.correoDataGridViewTextBoxColumn,
+            this.photoDataGridViewTextBoxColumn,
+            this.fullNameDataGridViewTextBoxColumn});
+            this.grdAdviser.DataSource = this.coordinatorBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -407,7 +427,7 @@
             this.grdAdviser.EnableHeadersVisualStyles = false;
             this.grdAdviser.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grdAdviser.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.grdAdviser.Location = new System.Drawing.Point(772, 108);
+            this.grdAdviser.Location = new System.Drawing.Point(776, 108);
             this.grdAdviser.Name = "grdAdviser";
             this.grdAdviser.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -421,8 +441,69 @@
             this.grdAdviser.RowHeadersWidth = 51;
             this.grdAdviser.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdAdviser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdAdviser.Size = new System.Drawing.Size(506, 310);
+            this.grdAdviser.Size = new System.Drawing.Size(637, 306);
             this.grdAdviser.TabIndex = 33;
+            // 
+            // coordinatorBindingSource
+            // 
+            this.coordinatorBindingSource.DataSource = typeof(ProyectoNaranja.Entities.Coordinator);
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // firstNameDataGridViewTextBoxColumn
+            // 
+            this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // lastNameDataGridViewTextBoxColumn
+            // 
+            this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // cellPhoneNumberDataGridViewTextBoxColumn
+            // 
+            this.cellPhoneNumberDataGridViewTextBoxColumn.DataPropertyName = "CellPhoneNumber";
+            this.cellPhoneNumberDataGridViewTextBoxColumn.HeaderText = "CellPhoneNumber";
+            this.cellPhoneNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.cellPhoneNumberDataGridViewTextBoxColumn.Name = "cellPhoneNumberDataGridViewTextBoxColumn";
+            this.cellPhoneNumberDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // correoDataGridViewTextBoxColumn
+            // 
+            this.correoDataGridViewTextBoxColumn.DataPropertyName = "Correo";
+            this.correoDataGridViewTextBoxColumn.HeaderText = "Correo";
+            this.correoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.correoDataGridViewTextBoxColumn.Name = "correoDataGridViewTextBoxColumn";
+            this.correoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // photoDataGridViewTextBoxColumn
+            // 
+            this.photoDataGridViewTextBoxColumn.DataPropertyName = "Photo";
+            this.photoDataGridViewTextBoxColumn.HeaderText = "Photo";
+            this.photoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.photoDataGridViewTextBoxColumn.Name = "photoDataGridViewTextBoxColumn";
+            this.photoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // fullNameDataGridViewTextBoxColumn
+            // 
+            this.fullNameDataGridViewTextBoxColumn.DataPropertyName = "FullName";
+            this.fullNameDataGridViewTextBoxColumn.HeaderText = "FullName";
+            this.fullNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.fullNameDataGridViewTextBoxColumn.Name = "fullNameDataGridViewTextBoxColumn";
+            this.fullNameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.fullNameDataGridViewTextBoxColumn.Width = 125;
             // 
             // FrmCoordinator
             // 
@@ -442,6 +523,7 @@
             this.pnlAdviser.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctCoach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdAdviser)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coordinatorBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -469,5 +551,13 @@
         private MetroFramework.Controls.MetroLabel lblID;
         private System.Windows.Forms.PictureBox pctCoach;
         private MetroFramework.Controls.MetroGrid grdAdviser;
+        private System.Windows.Forms.DataGridViewTextBoxColumn iDDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn firstNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn lastNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn cellPhoneNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn correoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn photoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn fullNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource coordinatorBindingSource;
     }
 }

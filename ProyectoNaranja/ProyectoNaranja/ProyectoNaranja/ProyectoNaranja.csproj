@@ -192,6 +192,7 @@
     <None Include="Properties\DataSources\ProyectoNaranja.Entities.Adviser.datasource" />
     <None Include="Properties\DataSources\ProyectoNaranja.Entities.Coach.datasource" />
     <None Include="Properties\DataSources\ProyectoNaranja.Entities.Company1.datasource" />
+    <None Include="Properties\DataSources\ProyectoNaranja.Entities.Coordinator.datasource" />
     <None Include="Properties\DataSources\ProyectoNaranja.Entities.Major.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
