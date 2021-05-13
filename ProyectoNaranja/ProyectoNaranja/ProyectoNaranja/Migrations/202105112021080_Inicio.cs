@@ -74,6 +74,7 @@
                         FirstName = c.String(nullable: false, maxLength: 30),
                         LastName = c.String(maxLength: 30),
                         CellPhoneNumber = c.String(maxLength: 30),
+                        PhoneNumber = c.String(maxLength: 30),
                         Correo = c.String(),
                         Photo = c.String(maxLength: 30),
                     })
