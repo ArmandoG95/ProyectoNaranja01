@@ -136,6 +136,10 @@
     <Compile Include="Migrations\202105120332237_TestMig.designer.cs">
       <DependentUpon>202105120332237_TestMig.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202105131602565_testmig1.cs" />
+    <Compile Include="Migrations\202105131602565_testmig1.designer.cs">
+      <DependentUpon>202105131602565_testmig1.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -169,6 +173,9 @@
     <EmbeddedResource Include="Migrations\202105120332237_TestMig.resx">
       <DependentUpon>202105120332237_TestMig.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105131602565_testmig1.resx">
+      <DependentUpon>202105131602565_testmig1.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -181,6 +188,8 @@
     <None Include="packages.config" />
     <None Include="Properties\DataSources\ProyectoNaranja.Entities.Adviser.datasource" />
     <None Include="Properties\DataSources\ProyectoNaranja.Entities.Coach.datasource" />
+    <None Include="Properties\DataSources\ProyectoNaranja.Entities.Company1.datasource" />
+    <None Include="Properties\DataSources\ProyectoNaranja.Entities.Major.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

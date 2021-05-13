@@ -29,12 +29,14 @@ namespace ProyectoNaranja
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.lblIabel = new MetroFramework.Controls.MetroLabel();
             this.txtId = new MetroFramework.Controls.MetroTextBox();
             this.pnlDatos = new MetroFramework.Controls.MetroPanel();
+            this.btnSearch = new MetroFramework.Controls.MetroButton();
             this.pctPhoto = new System.Windows.Forms.PictureBox();
             this.txtDescription = new MetroFramework.Controls.MetroTextBox();
             this.lblDescription = new MetroFramework.Controls.MetroLabel();
@@ -44,16 +46,23 @@ namespace ProyectoNaranja
             this.lblPhoneNumber = new MetroFramework.Controls.MetroLabel();
             this.txtName = new MetroFramework.Controls.MetroTextBox();
             this.lblName = new MetroFramework.Controls.MetroLabel();
-            this.btnSearch = new MetroFramework.Controls.MetroButton();
             this.btnEdit = new MetroFramework.Controls.MetroButton();
             this.btnSave = new MetroFramework.Controls.MetroButton();
             this.btnCancel = new MetroFramework.Controls.MetroButton();
             this.btnAdd = new MetroFramework.Controls.MetroButton();
             this.btnDelete = new MetroFramework.Controls.MetroButton();
             this.grdDatos = new MetroFramework.Controls.MetroGrid();
+            this.majorBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.photoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.descriptionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.majorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblIabel
@@ -79,6 +88,7 @@ namespace ProyectoNaranja
             this.txtId.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtId.CustomButton.UseSelectable = true;
             this.txtId.CustomButton.Visible = false;
+            this.txtId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.majorBindingSource, "Id", true));
             this.txtId.Lines = new string[0];
             this.txtId.Location = new System.Drawing.Point(207, 36);
             this.txtId.MaxLength = 32767;
@@ -120,6 +130,15 @@ namespace ProyectoNaranja
             this.pnlDatos.VerticalScrollbarHighlightOnWheel = false;
             this.pnlDatos.VerticalScrollbarSize = 10;
             // 
+            // btnSearch
+            // 
+            this.btnSearch.Location = new System.Drawing.Point(13, 190);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(131, 27);
+            this.btnSearch.TabIndex = 11;
+            this.btnSearch.Text = "Search";
+            this.btnSearch.UseSelectable = true;
+            // 
             // pctPhoto
             // 
             this.pctPhoto.Location = new System.Drawing.Point(13, 36);
@@ -142,6 +161,7 @@ namespace ProyectoNaranja
             this.txtDescription.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtDescription.CustomButton.UseSelectable = true;
             this.txtDescription.CustomButton.Visible = false;
+            this.txtDescription.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.majorBindingSource, "Description", true));
             this.txtDescription.Lines = new string[0];
             this.txtDescription.Location = new System.Drawing.Point(244, 195);
             this.txtDescription.MaxLength = 32767;
@@ -181,6 +201,7 @@ namespace ProyectoNaranja
             this.txtEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtEmail.CustomButton.UseSelectable = true;
             this.txtEmail.CustomButton.Visible = false;
+            this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.majorBindingSource, "Correo", true));
             this.txtEmail.Lines = new string[0];
             this.txtEmail.Location = new System.Drawing.Point(207, 154);
             this.txtEmail.MaxLength = 32767;
@@ -220,6 +241,7 @@ namespace ProyectoNaranja
             this.txtPhoneNumber.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtPhoneNumber.CustomButton.UseSelectable = true;
             this.txtPhoneNumber.CustomButton.Visible = false;
+            this.txtPhoneNumber.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.majorBindingSource, "PhoneNumber", true));
             this.txtPhoneNumber.Lines = new string[0];
             this.txtPhoneNumber.Location = new System.Drawing.Point(266, 116);
             this.txtPhoneNumber.MaxLength = 32767;
@@ -259,6 +281,7 @@ namespace ProyectoNaranja
             this.txtName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtName.CustomButton.UseSelectable = true;
             this.txtName.CustomButton.Visible = false;
+            this.txtName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.majorBindingSource, "Name", true));
             this.txtName.Lines = new string[0];
             this.txtName.Location = new System.Drawing.Point(207, 73);
             this.txtName.MaxLength = 32767;
@@ -283,15 +306,6 @@ namespace ProyectoNaranja
             this.lblName.Size = new System.Drawing.Size(50, 20);
             this.lblName.TabIndex = 2;
             this.lblName.Text = "Name:";
-            // 
-            // btnSearch
-            // 
-            this.btnSearch.Location = new System.Drawing.Point(13, 190);
-            this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(131, 27);
-            this.btnSearch.TabIndex = 11;
-            this.btnSearch.Text = "Search";
-            this.btnSearch.UseSelectable = true;
             // 
             // btnEdit
             // 
@@ -341,6 +355,7 @@ namespace ProyectoNaranja
             // grdDatos
             // 
             this.grdDatos.AllowUserToResizeRows = false;
+            this.grdDatos.AutoGenerateColumns = false;
             this.grdDatos.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grdDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -354,6 +369,14 @@ namespace ProyectoNaranja
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.grdDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.grdDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.grdDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.nameDataGridViewTextBoxColumn,
+            this.phoneNumberDataGridViewTextBoxColumn,
+            this.photoDataGridViewTextBoxColumn,
+            this.correoDataGridViewTextBoxColumn,
+            this.descriptionDataGridViewTextBoxColumn});
+            this.grdDatos.DataSource = this.majorBindingSource;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
@@ -383,6 +406,58 @@ namespace ProyectoNaranja
             this.grdDatos.Size = new System.Drawing.Size(707, 286);
             this.grdDatos.TabIndex = 8;
             // 
+            // majorBindingSource
+            // 
+            this.majorBindingSource.DataSource = typeof(ProyectoNaranja.Entities.Major);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Id";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
+            this.nameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // phoneNumberDataGridViewTextBoxColumn
+            // 
+            this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            this.phoneNumberDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // photoDataGridViewTextBoxColumn
+            // 
+            this.photoDataGridViewTextBoxColumn.DataPropertyName = "Photo";
+            this.photoDataGridViewTextBoxColumn.HeaderText = "Photo";
+            this.photoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.photoDataGridViewTextBoxColumn.Name = "photoDataGridViewTextBoxColumn";
+            this.photoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // correoDataGridViewTextBoxColumn
+            // 
+            this.correoDataGridViewTextBoxColumn.DataPropertyName = "Correo";
+            this.correoDataGridViewTextBoxColumn.HeaderText = "Correo";
+            this.correoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.correoDataGridViewTextBoxColumn.Name = "correoDataGridViewTextBoxColumn";
+            this.correoDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // descriptionDataGridViewTextBoxColumn
+            // 
+            this.descriptionDataGridViewTextBoxColumn.DataPropertyName = "Description";
+            this.descriptionDataGridViewTextBoxColumn.HeaderText = "Description";
+            this.descriptionDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.descriptionDataGridViewTextBoxColumn.Name = "descriptionDataGridViewTextBoxColumn";
+            this.descriptionDataGridViewTextBoxColumn.Width = 125;
+            // 
             // FrmMajor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -401,6 +476,7 @@ namespace ProyectoNaranja
             this.pnlDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctPhoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.majorBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -426,5 +502,12 @@ namespace ProyectoNaranja
         private MetroFramework.Controls.MetroButton btnAdd;
         private MetroFramework.Controls.MetroButton btnDelete;
         private MetroFramework.Controls.MetroGrid grdDatos;
+        private System.Windows.Forms.BindingSource majorBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn phoneNumberDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn photoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn correoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn descriptionDataGridViewTextBoxColumn;
     }
 }
