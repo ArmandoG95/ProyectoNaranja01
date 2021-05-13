@@ -16,7 +16,7 @@ namespace ProyectoNaranja.Entities
         public string CellPhoneNumber { get; set; }
         
         public string Correo { get; set; }
-        [StringLength(30)]
+        [StringLength(250)]
         public string Photo { get; set; }
         public string FullName { get { return $"{FirstName} { LastName}"; } }
         #endregion
