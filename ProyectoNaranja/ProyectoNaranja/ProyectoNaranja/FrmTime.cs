@@ -52,7 +52,9 @@ namespace ProyectoNaranja
 
         private void btnCancel_Click(object sender, EventArgs e)
         {
-
+            pnlDatos.Enabled = false;
+            timeBindingSource.ResetBindings(false);
+            FrmTime_Load(sender, e);
         }
     }
 }
