@@ -67,9 +67,30 @@ namespace ProyectoNaranja
         private void btnSearch_Click(object sender, EventArgs e)
         {
             {
-                using (OpenFileDialog ofd = new OpenFileDialog())
+                using (OpenFileDialog ofd = new OpenFileDialog()
                 {
-                    
+                    Filter = "archivos .JPG|*.jpg|todos los archivos|*.*"
+                })
+                {
+                    if (ofd.ShowDialog()== DialogResult.OK)
+                    {
+                        pctPhoto.Image = Image.FromFile(ofd.FileName);
+                        Coordinator coordinator = coordinatorBindingSource.Current as Coordinator;
+                        if (coordinator != null)
+                            coordinator.Photo = ofd.FileName;
+                    }
+                }
+
+            }
+        }
+
+        private void bttDelete_Click(object sender, EventArgs e)
+        {
+            if (MetroFramework.MetroMessageBox.Show(this, "Quieres eliminar al asesor") == DialogResult.OK)
+            {
+                using (DataContext dataContext = new DataContext())
+                {
+
                 }
             }
         }
