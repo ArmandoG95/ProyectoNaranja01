@@ -41,19 +41,16 @@
             this.btnSearch = new MetroFramework.Controls.MetroButton();
             this.txtEmail = new MetroFramework.Controls.MetroTextBox();
             this.txtCellPhoneNumber = new MetroFramework.Controls.MetroTextBox();
-            this.txtPhoneNumber = new MetroFramework.Controls.MetroTextBox();
             this.txtLastName = new MetroFramework.Controls.MetroTextBox();
             this.txtFirstName = new MetroFramework.Controls.MetroTextBox();
             this.txtID = new MetroFramework.Controls.MetroTextBox();
             this.lblEmail = new MetroFramework.Controls.MetroLabel();
             this.lblCellPhoneNumber = new MetroFramework.Controls.MetroLabel();
-            this.lblPhoneNumber = new MetroFramework.Controls.MetroLabel();
             this.lblLastName = new MetroFramework.Controls.MetroLabel();
             this.lblFirtsName = new MetroFramework.Controls.MetroLabel();
             this.lblID = new MetroFramework.Controls.MetroLabel();
             this.pctCoach = new System.Windows.Forms.PictureBox();
             this.grdAdviser = new MetroFramework.Controls.MetroGrid();
-            this.coordinatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.firstNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lastNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -61,6 +58,7 @@
             this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.photoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coordinatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlAdviser.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctCoach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdAdviser)).BeginInit();
@@ -117,13 +115,11 @@
             this.pnlAdviser.Controls.Add(this.btnSearch);
             this.pnlAdviser.Controls.Add(this.txtEmail);
             this.pnlAdviser.Controls.Add(this.txtCellPhoneNumber);
-            this.pnlAdviser.Controls.Add(this.txtPhoneNumber);
             this.pnlAdviser.Controls.Add(this.txtLastName);
             this.pnlAdviser.Controls.Add(this.txtFirstName);
             this.pnlAdviser.Controls.Add(this.txtID);
             this.pnlAdviser.Controls.Add(this.lblEmail);
             this.pnlAdviser.Controls.Add(this.lblCellPhoneNumber);
-            this.pnlAdviser.Controls.Add(this.lblPhoneNumber);
             this.pnlAdviser.Controls.Add(this.lblLastName);
             this.pnlAdviser.Controls.Add(this.lblFirtsName);
             this.pnlAdviser.Controls.Add(this.lblID);
@@ -163,7 +159,7 @@
             this.txtEmail.CustomButton.UseSelectable = true;
             this.txtEmail.CustomButton.Visible = false;
             this.txtEmail.Lines = new string[0];
-            this.txtEmail.Location = new System.Drawing.Point(382, 183);
+            this.txtEmail.Location = new System.Drawing.Point(382, 159);
             this.txtEmail.MaxLength = 32767;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
@@ -193,7 +189,7 @@
             this.txtCellPhoneNumber.CustomButton.UseSelectable = true;
             this.txtCellPhoneNumber.CustomButton.Visible = false;
             this.txtCellPhoneNumber.Lines = new string[0];
-            this.txtCellPhoneNumber.Location = new System.Drawing.Point(382, 154);
+            this.txtCellPhoneNumber.Location = new System.Drawing.Point(382, 126);
             this.txtCellPhoneNumber.MaxLength = 32767;
             this.txtCellPhoneNumber.Name = "txtCellPhoneNumber";
             this.txtCellPhoneNumber.PasswordChar = '\0';
@@ -207,36 +203,6 @@
             this.txtCellPhoneNumber.UseSelectable = true;
             this.txtCellPhoneNumber.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtCellPhoneNumber.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // txtPhoneNumber
-            // 
-            // 
-            // 
-            // 
-            this.txtPhoneNumber.CustomButton.Image = null;
-            this.txtPhoneNumber.CustomButton.Location = new System.Drawing.Point(219, 1);
-            this.txtPhoneNumber.CustomButton.Name = "";
-            this.txtPhoneNumber.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.txtPhoneNumber.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.txtPhoneNumber.CustomButton.TabIndex = 1;
-            this.txtPhoneNumber.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.txtPhoneNumber.CustomButton.UseSelectable = true;
-            this.txtPhoneNumber.CustomButton.Visible = false;
-            this.txtPhoneNumber.Lines = new string[0];
-            this.txtPhoneNumber.Location = new System.Drawing.Point(382, 122);
-            this.txtPhoneNumber.MaxLength = 32767;
-            this.txtPhoneNumber.Name = "txtPhoneNumber";
-            this.txtPhoneNumber.PasswordChar = '\0';
-            this.txtPhoneNumber.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.txtPhoneNumber.SelectedText = "";
-            this.txtPhoneNumber.SelectionLength = 0;
-            this.txtPhoneNumber.SelectionStart = 0;
-            this.txtPhoneNumber.ShortcutsEnabled = true;
-            this.txtPhoneNumber.Size = new System.Drawing.Size(241, 23);
-            this.txtPhoneNumber.TabIndex = 13;
-            this.txtPhoneNumber.UseSelectable = true;
-            this.txtPhoneNumber.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.txtPhoneNumber.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // txtLastName
             // 
@@ -252,6 +218,7 @@
             this.txtLastName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtLastName.CustomButton.UseSelectable = true;
             this.txtLastName.CustomButton.Visible = false;
+            this.txtLastName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coordinatorBindingSource, "LastName", true));
             this.txtLastName.Lines = new string[0];
             this.txtLastName.Location = new System.Drawing.Point(382, 93);
             this.txtLastName.MaxLength = 32767;
@@ -282,6 +249,7 @@
             this.txtFirstName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtFirstName.CustomButton.UseSelectable = true;
             this.txtFirstName.CustomButton.Visible = false;
+            this.txtFirstName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coordinatorBindingSource, "FirstName", true));
             this.txtFirstName.Lines = new string[0];
             this.txtFirstName.Location = new System.Drawing.Point(382, 64);
             this.txtFirstName.MaxLength = 32767;
@@ -312,6 +280,7 @@
             this.txtID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtID.CustomButton.UseSelectable = true;
             this.txtID.CustomButton.Visible = false;
+            this.txtID.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coordinatorBindingSource, "ID", true));
             this.txtID.Lines = new string[0];
             this.txtID.Location = new System.Drawing.Point(382, 33);
             this.txtID.MaxLength = 32767;
@@ -331,7 +300,7 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(195, 186);
+            this.lblEmail.Location = new System.Drawing.Point(195, 157);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(42, 20);
             this.lblEmail.TabIndex = 8;
@@ -340,20 +309,11 @@
             // lblCellPhoneNumber
             // 
             this.lblCellPhoneNumber.AutoSize = true;
-            this.lblCellPhoneNumber.Location = new System.Drawing.Point(195, 154);
+            this.lblCellPhoneNumber.Location = new System.Drawing.Point(195, 126);
             this.lblCellPhoneNumber.Name = "lblCellPhoneNumber";
             this.lblCellPhoneNumber.Size = new System.Drawing.Size(132, 20);
             this.lblCellPhoneNumber.TabIndex = 7;
             this.lblCellPhoneNumber.Text = "Cell Phone Number";
-            // 
-            // lblPhoneNumber
-            // 
-            this.lblPhoneNumber.AutoSize = true;
-            this.lblPhoneNumber.Location = new System.Drawing.Point(195, 125);
-            this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(105, 20);
-            this.lblPhoneNumber.TabIndex = 6;
-            this.lblPhoneNumber.Text = "Phone Number";
             // 
             // lblLastName
             // 
@@ -444,10 +404,6 @@
             this.grdAdviser.Size = new System.Drawing.Size(637, 306);
             this.grdAdviser.TabIndex = 33;
             // 
-            // coordinatorBindingSource
-            // 
-            this.coordinatorBindingSource.DataSource = typeof(ProyectoNaranja.Entities.Coordinator);
-            // 
             // iDDataGridViewTextBoxColumn
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
@@ -505,6 +461,10 @@
             this.fullNameDataGridViewTextBoxColumn.ReadOnly = true;
             this.fullNameDataGridViewTextBoxColumn.Width = 125;
             // 
+            // coordinatorBindingSource
+            // 
+            this.coordinatorBindingSource.DataSource = typeof(ProyectoNaranja.Entities.Coordinator);
+            // 
             // FrmCoordinator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -539,13 +499,11 @@
         private MetroFramework.Controls.MetroButton btnSearch;
         private MetroFramework.Controls.MetroTextBox txtEmail;
         private MetroFramework.Controls.MetroTextBox txtCellPhoneNumber;
-        private MetroFramework.Controls.MetroTextBox txtPhoneNumber;
         private MetroFramework.Controls.MetroTextBox txtLastName;
         private MetroFramework.Controls.MetroTextBox txtFirstName;
         private MetroFramework.Controls.MetroTextBox txtID;
         private MetroFramework.Controls.MetroLabel lblEmail;
         private MetroFramework.Controls.MetroLabel lblCellPhoneNumber;
-        private MetroFramework.Controls.MetroLabel lblPhoneNumber;
         private MetroFramework.Controls.MetroLabel lblLastName;
         private MetroFramework.Controls.MetroLabel lblFirtsName;
         private MetroFramework.Controls.MetroLabel lblID;
