@@ -47,5 +47,31 @@ namespace ProyectoNaranja
             txtFirstName.Focus();
             Coordinator coordinator = coordinatorBindingSource.Current as Coordinator; 
         }
+
+        private void bttCancel_Click(object sender, EventArgs e)
+        {
+            pnlDatos.Enabled = false;
+            coordinatorBindingSource.ResetBindings(false);
+            FrmCoordinator_Load(sender, e); 
+        }
+
+        private void grdDatos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Coordinator coordinator = coordinatorBindingSource.Current as Coordinator;
+            if (coordinator != null && coordinator.Photo != null)
+                pctPhoto.Image = Image.FromFile(coordinator.Photo);
+            else
+                pctPhoto.Image = null;
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            {
+                using (OpenFileDialog ofd = new OpenFileDialog())
+                {
+                    
+                }
+            }
+        }
     }
 }
