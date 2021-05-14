@@ -56,5 +56,14 @@ namespace ProyectoNaranja
             timeBindingSource.ResetBindings(false);
             FrmTime_Load(sender, e);
         }
+
+        private void grdDatos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Time time = timeBindingSource.Current as Time;
+            if (time != null && time.Photo != null)
+                pctPhoto.Image = Image.FromFile(time.Photo);
+            else
+                pctPhoto.Image = null;
+        }
     }
 }
