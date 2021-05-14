@@ -202,6 +202,7 @@
     <None Include="Properties\DataSources\ProyectoNaranja.Entities.Contact.datasource" />
     <None Include="Properties\DataSources\ProyectoNaranja.Entities.Coordinator.datasource" />
     <None Include="Properties\DataSources\ProyectoNaranja.Entities.Major.datasource" />
+    <None Include="Properties\DataSources\ProyectoNaranja.Entities.Time.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
