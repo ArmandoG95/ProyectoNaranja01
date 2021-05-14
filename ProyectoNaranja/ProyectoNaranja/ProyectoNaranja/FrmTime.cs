@@ -49,5 +49,10 @@ namespace ProyectoNaranja
             txtName.Focus();
             Time time = timeBindingSource.Current as Time;
         }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
