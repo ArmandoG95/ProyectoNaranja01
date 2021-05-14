@@ -47,5 +47,52 @@ namespace ProyectoNaranja
             txtFirstName.Focus();
             Coordinator coordinator = coordinatorBindingSource.Current as Coordinator; 
         }
+
+        private void bttCancel_Click(object sender, EventArgs e)
+        {
+            pnlDatos.Enabled = false;
+            coordinatorBindingSource.ResetBindings(false);
+            FrmCoordinator_Load(sender, e); 
+        }
+
+        private void grdDatos_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Coordinator coordinator = coordinatorBindingSource.Current as Coordinator;
+            if (coordinator != null && coordinator.Photo != null)
+                pctPhoto.Image = Image.FromFile(coordinator.Photo);
+            else
+                pctPhoto.Image = null;
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            {
+                using (OpenFileDialog ofd = new OpenFileDialog()
+                {
+                    Filter = "archivos .JPG|*.jpg|todos los archivos|*.*"
+                })
+                {
+                    if (ofd.ShowDialog()== DialogResult.OK)
+                    {
+                        pctPhoto.Image = Image.FromFile(ofd.FileName);
+                        Coordinator coordinator = coordinatorBindingSource.Current as Coordinator;
+                        if (coordinator != null)
+                            coordinator.Photo = ofd.FileName;
+                    }
+                }
+
+            }
+        }
+
+        private void bttDelete_Click(object sender, EventArgs e)
+        {
+            if (MetroFramework.MetroMessageBox.Show(this, "Quieres eliminar al asesor") == DialogResult.OK)
+            {
+                using (DataContext dataContext = new DataContext())
+                {
+
+                }
+            }
+        }
     }
 }
