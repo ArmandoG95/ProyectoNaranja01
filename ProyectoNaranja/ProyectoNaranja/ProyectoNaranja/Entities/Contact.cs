@@ -15,23 +15,24 @@ namespace ProyectoNaranja.Entities
         [Required]
         [StringLength(30)]
         public string FirstName { get; set; }
-        [Required]
+        
         [StringLength(30)]
         public string LastName { get; set; }
-        [Required]
+        
         [StringLength(30)]
         public string PhoneNumber { get; set; }
         [StringLength(250)]
         public string CellphoneNumber { get; set; }
         
         public int Correo { get; set; }
-        [Required]
+        
         [StringLength(30)]
         public string Photo { get; set; }
         public int Department { get; set; }
-        [Required]
+        
         [StringLength(30)]
-        public string FullName { get; }
+        public string FullName { get { return $"{FirstName} {LastName}"; } }
+
         #endregion
     }
 }
