@@ -40,7 +40,6 @@
             this.pnlDatos = new MetroFramework.Controls.MetroPanel();
             this.btnSearch = new MetroFramework.Controls.MetroButton();
             this.txtEmail = new MetroFramework.Controls.MetroTextBox();
-            this.coordinatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.txtCellPhoneNumber = new MetroFramework.Controls.MetroTextBox();
             this.txtLastName = new MetroFramework.Controls.MetroTextBox();
             this.txtFirstName = new MetroFramework.Controls.MetroTextBox();
@@ -59,10 +58,11 @@
             this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.photoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.coordinatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlDatos.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.coordinatorBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coordinatorBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // bttSave
@@ -180,10 +180,6 @@
             this.txtEmail.UseSelectable = true;
             this.txtEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtEmail.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // coordinatorBindingSource
-            // 
-            this.coordinatorBindingSource.DataSource = typeof(ProyectoNaranja.Entities.Coordinator);
             // 
             // txtCellPhoneNumber
             // 
@@ -360,6 +356,7 @@
             this.pctPhoto.Location = new System.Drawing.Point(25, 33);
             this.pctPhoto.Name = "pctPhoto";
             this.pctPhoto.Size = new System.Drawing.Size(147, 149);
+            this.pctPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pctPhoto.TabIndex = 2;
             this.pctPhoto.TabStop = false;
             // 
@@ -475,6 +472,10 @@
             this.fullNameDataGridViewTextBoxColumn.ReadOnly = true;
             this.fullNameDataGridViewTextBoxColumn.Width = 125;
             // 
+            // coordinatorBindingSource
+            // 
+            this.coordinatorBindingSource.DataSource = typeof(ProyectoNaranja.Entities.Coordinator);
+            // 
             // FrmCoordinator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -488,13 +489,13 @@
             this.Controls.Add(this.bttAdd);
             this.Controls.Add(this.pnlDatos);
             this.Name = "FrmCoordinator";
-            this.Text = "FrmCoordinator";
+            this.Text = "Coordinator";
             this.Load += new System.EventHandler(this.FrmCoordinator_Load);
             this.pnlDatos.ResumeLayout(false);
             this.pnlDatos.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.coordinatorBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctPhoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.coordinatorBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
