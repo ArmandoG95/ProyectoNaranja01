@@ -16,7 +16,7 @@ namespace ProyectoNaranja
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FrmContact());
+            Application.Run(new Form1());
         }
     }
 }
