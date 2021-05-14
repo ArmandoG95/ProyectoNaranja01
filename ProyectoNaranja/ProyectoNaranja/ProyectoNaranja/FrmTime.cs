@@ -33,5 +33,21 @@ namespace ProyectoNaranja
                     pctPhoto.Image = null;
             }
         }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            pnlDatos.Enabled = true;
+            pctPhoto.Image = null;
+            timeBindingSource.Add(new Time());
+            timeBindingSource.MoveLast();
+            txtName.Focus();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+            pnlDatos.Enabled = true;
+            txtName.Focus();
+            Time time = timeBindingSource.Current as Time;
+        }
     }
 }
