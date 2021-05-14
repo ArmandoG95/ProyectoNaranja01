@@ -21,18 +21,16 @@ namespace ProyectoNaranja
 
         private void FrmContact_Load(object sender, EventArgs e)
         {
+            using (DataContext dataContext = new DataContext())
             {
-                using (DataContext dataContext = new DataContext())
-                {
-                    contactBindingSource.DataSource = dataContext.Contacts.ToList();
-                }
-                pnlDatos.Enabled = false;
-                Contact contact = contactBindingSource.Current as Contact;
-                if (contact != null && contact.Photo != null)
-                    pctPhoto.Image = Image.FromFile(contact.Photo);
-                else
-                    pctPhoto.Image = null;
+                contactBindingSource.DataSource = dataContext.Contacts.ToList();
             }
+            pnlDatos.Enabled = false;
+            Contact contact = contactBindingSource.Current as Contact;
+            if (contact != null && contact.Photo != null)
+                pctPhoto.Image = Image.FromFile(contact.Photo);
+            else
+                pctPhoto.Image = null;
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -111,7 +109,7 @@ namespace ProyectoNaranja
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            if (MetroFramework.MetroMessageBox.Show(this, "Quieres eliminar al asesor?") == DialogResult.OK)
+            if (MetroFramework.MetroMessageBox.Show(this, "Quieres eliminar al contacto?") == DialogResult.OK)
             {
                 using (DataContext dataContext = new DataContext())
                 {

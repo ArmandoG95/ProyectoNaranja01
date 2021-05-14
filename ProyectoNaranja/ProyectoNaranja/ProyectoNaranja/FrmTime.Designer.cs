@@ -30,15 +30,18 @@ namespace ProyectoNaranja
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.btnDelete = new MetroFramework.Controls.MetroButton();
             this.btnAdd = new MetroFramework.Controls.MetroButton();
             this.btnCancel = new MetroFramework.Controls.MetroButton();
             this.btnSave = new MetroFramework.Controls.MetroButton();
             this.btnEdit = new MetroFramework.Controls.MetroButton();
             this.pnlDatos = new MetroFramework.Controls.MetroPanel();
+            this.txtLastName = new MetroFramework.Controls.MetroTextBox();
+            this.timeBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.lblLastName = new MetroFramework.Controls.MetroLabel();
             this.txtDepartment = new MetroFramework.Controls.MetroTextBox();
             this.lblHours = new MetroFramework.Controls.MetroLabel();
             this.lblcellphoneNumber = new MetroFramework.Controls.MetroLabel();
@@ -50,7 +53,7 @@ namespace ProyectoNaranja
             this.txtPhoneNumber = new MetroFramework.Controls.MetroTextBox();
             this.lblPhoneNumber = new MetroFramework.Controls.MetroLabel();
             this.txtName = new MetroFramework.Controls.MetroTextBox();
-            this.lblName = new MetroFramework.Controls.MetroLabel();
+            this.lblFirstName = new MetroFramework.Controls.MetroLabel();
             this.txtId = new MetroFramework.Controls.MetroTextBox();
             this.lblIabel = new MetroFramework.Controls.MetroLabel();
             this.grdDatos = new MetroFramework.Controls.MetroGrid();
@@ -63,17 +66,16 @@ namespace ProyectoNaranja
             this.departmentDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.photoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.timeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.pnlDatos.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.timeBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctPhoto)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(339, 321);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
+            this.btnDelete.Location = new System.Drawing.Point(315, 321);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(56, 19);
             this.btnDelete.TabIndex = 20;
@@ -83,8 +85,8 @@ namespace ProyectoNaranja
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(278, 321);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
+            this.btnAdd.Location = new System.Drawing.Point(242, 321);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(56, 19);
             this.btnAdd.TabIndex = 19;
@@ -94,8 +96,8 @@ namespace ProyectoNaranja
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(217, 321);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(2);
+            this.btnCancel.Location = new System.Drawing.Point(173, 321);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
             this.btnCancel.Size = new System.Drawing.Size(56, 19);
             this.btnCancel.TabIndex = 18;
@@ -105,8 +107,8 @@ namespace ProyectoNaranja
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(156, 321);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSave.Location = new System.Drawing.Point(102, 321);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(56, 19);
             this.btnSave.TabIndex = 17;
@@ -116,8 +118,8 @@ namespace ProyectoNaranja
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(95, 321);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
+            this.btnEdit.Location = new System.Drawing.Point(32, 321);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(56, 19);
             this.btnEdit.TabIndex = 16;
@@ -127,6 +129,8 @@ namespace ProyectoNaranja
             // 
             // pnlDatos
             // 
+            this.pnlDatos.Controls.Add(this.txtLastName);
+            this.pnlDatos.Controls.Add(this.lblLastName);
             this.pnlDatos.Controls.Add(this.txtDepartment);
             this.pnlDatos.Controls.Add(this.lblHours);
             this.pnlDatos.Controls.Add(this.lblcellphoneNumber);
@@ -138,14 +142,14 @@ namespace ProyectoNaranja
             this.pnlDatos.Controls.Add(this.txtPhoneNumber);
             this.pnlDatos.Controls.Add(this.lblPhoneNumber);
             this.pnlDatos.Controls.Add(this.txtName);
-            this.pnlDatos.Controls.Add(this.lblName);
+            this.pnlDatos.Controls.Add(this.lblFirstName);
             this.pnlDatos.Controls.Add(this.txtId);
             this.pnlDatos.Controls.Add(this.lblIabel);
             this.pnlDatos.HorizontalScrollbarBarColor = true;
             this.pnlDatos.HorizontalScrollbarHighlightOnWheel = false;
             this.pnlDatos.HorizontalScrollbarSize = 8;
             this.pnlDatos.Location = new System.Drawing.Point(22, 86);
-            this.pnlDatos.Margin = new System.Windows.Forms.Padding(2);
+            this.pnlDatos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlDatos.Name = "pnlDatos";
             this.pnlDatos.Size = new System.Drawing.Size(372, 225);
             this.pnlDatos.TabIndex = 15;
@@ -153,15 +157,62 @@ namespace ProyectoNaranja
             this.pnlDatos.VerticalScrollbarHighlightOnWheel = false;
             this.pnlDatos.VerticalScrollbarSize = 8;
             // 
+            // txtLastName
+            // 
+            // 
+            // 
+            // 
+            this.txtLastName.CustomButton.Image = null;
+            this.txtLastName.CustomButton.Location = new System.Drawing.Point(112, 1);
+            this.txtLastName.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLastName.CustomButton.Name = "";
+            this.txtLastName.CustomButton.Size = new System.Drawing.Size(13, 14);
+            this.txtLastName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.txtLastName.CustomButton.TabIndex = 1;
+            this.txtLastName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.txtLastName.CustomButton.UseSelectable = true;
+            this.txtLastName.CustomButton.Visible = false;
+            this.txtLastName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.timeBindingSource, "LastName", true));
+            this.txtLastName.Lines = new string[0];
+            this.txtLastName.Location = new System.Drawing.Point(195, 82);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtLastName.MaxLength = 32767;
+            this.txtLastName.Name = "txtLastName";
+            this.txtLastName.PasswordChar = '\0';
+            this.txtLastName.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.txtLastName.SelectedText = "";
+            this.txtLastName.SelectionLength = 0;
+            this.txtLastName.SelectionStart = 0;
+            this.txtLastName.ShortcutsEnabled = true;
+            this.txtLastName.Size = new System.Drawing.Size(167, 19);
+            this.txtLastName.TabIndex = 16;
+            this.txtLastName.UseSelectable = true;
+            this.txtLastName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.txtLastName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            // 
+            // timeBindingSource
+            // 
+            this.timeBindingSource.DataSource = typeof(ProyectoNaranja.Entities.Time);
+            // 
+            // lblLastName
+            // 
+            this.lblLastName.AutoSize = true;
+            this.lblLastName.Location = new System.Drawing.Point(113, 82);
+            this.lblLastName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblLastName.Name = "lblLastName";
+            this.lblLastName.Size = new System.Drawing.Size(70, 19);
+            this.lblLastName.TabIndex = 15;
+            this.lblLastName.Text = "LastName:";
+            // 
             // txtDepartment
             // 
             // 
             // 
             // 
             this.txtDepartment.CustomButton.Image = null;
-            this.txtDepartment.CustomButton.Location = new System.Drawing.Point(108, 1);
+            this.txtDepartment.CustomButton.Location = new System.Drawing.Point(81, 1);
             this.txtDepartment.CustomButton.Name = "";
-            this.txtDepartment.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtDepartment.CustomButton.Size = new System.Drawing.Size(16, 17);
             this.txtDepartment.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtDepartment.CustomButton.TabIndex = 1;
             this.txtDepartment.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -169,7 +220,7 @@ namespace ProyectoNaranja
             this.txtDepartment.CustomButton.Visible = false;
             this.txtDepartment.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.timeBindingSource, "Department", true));
             this.txtDepartment.Lines = new string[0];
-            this.txtDepartment.Location = new System.Drawing.Point(232, 187);
+            this.txtDepartment.Location = new System.Drawing.Point(232, 190);
             this.txtDepartment.MaxLength = 32767;
             this.txtDepartment.Name = "txtDepartment";
             this.txtDepartment.PasswordChar = '\0';
@@ -187,7 +238,7 @@ namespace ProyectoNaranja
             // lblHours
             // 
             this.lblHours.AutoSize = true;
-            this.lblHours.Location = new System.Drawing.Point(113, 187);
+            this.lblHours.Location = new System.Drawing.Point(113, 190);
             this.lblHours.Name = "lblHours";
             this.lblHours.Size = new System.Drawing.Size(43, 19);
             this.lblHours.TabIndex = 13;
@@ -196,7 +247,7 @@ namespace ProyectoNaranja
             // lblcellphoneNumber
             // 
             this.lblcellphoneNumber.AutoSize = true;
-            this.lblcellphoneNumber.Location = new System.Drawing.Point(113, 125);
+            this.lblcellphoneNumber.Location = new System.Drawing.Point(113, 128);
             this.lblcellphoneNumber.Name = "lblcellphoneNumber";
             this.lblcellphoneNumber.Size = new System.Drawing.Size(114, 19);
             this.lblcellphoneNumber.TabIndex = 12;
@@ -205,7 +256,7 @@ namespace ProyectoNaranja
             // btnSearch
             // 
             this.btnSearch.Location = new System.Drawing.Point(10, 154);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(98, 22);
             this.btnSearch.TabIndex = 11;
@@ -216,7 +267,7 @@ namespace ProyectoNaranja
             // pctPhoto
             // 
             this.pctPhoto.Location = new System.Drawing.Point(10, 29);
-            this.pctPhoto.Margin = new System.Windows.Forms.Padding(2);
+            this.pctPhoto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pctPhoto.Name = "pctPhoto";
             this.pctPhoto.Size = new System.Drawing.Size(99, 115);
             this.pctPhoto.TabIndex = 10;
@@ -228,10 +279,10 @@ namespace ProyectoNaranja
             // 
             // 
             this.txtEmail.CustomButton.Image = null;
-            this.txtEmail.CustomButton.Location = new System.Drawing.Point(112, 1);
-            this.txtEmail.CustomButton.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEmail.CustomButton.Location = new System.Drawing.Point(84, 1);
+            this.txtEmail.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEmail.CustomButton.Name = "";
-            this.txtEmail.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.txtEmail.CustomButton.Size = new System.Drawing.Size(13, 14);
             this.txtEmail.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtEmail.CustomButton.TabIndex = 1;
             this.txtEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -239,8 +290,8 @@ namespace ProyectoNaranja
             this.txtEmail.CustomButton.Visible = false;
             this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.timeBindingSource, "Correo", true));
             this.txtEmail.Lines = new string[0];
-            this.txtEmail.Location = new System.Drawing.Point(232, 158);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(2);
+            this.txtEmail.Location = new System.Drawing.Point(232, 161);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEmail.MaxLength = 32767;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
@@ -261,10 +312,10 @@ namespace ProyectoNaranja
             // 
             // 
             this.txtcellphoneNumber.CustomButton.Image = null;
-            this.txtcellphoneNumber.CustomButton.Location = new System.Drawing.Point(105, 1);
-            this.txtcellphoneNumber.CustomButton.Margin = new System.Windows.Forms.Padding(2);
+            this.txtcellphoneNumber.CustomButton.Location = new System.Drawing.Point(79, 1);
+            this.txtcellphoneNumber.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtcellphoneNumber.CustomButton.Name = "";
-            this.txtcellphoneNumber.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.txtcellphoneNumber.CustomButton.Size = new System.Drawing.Size(13, 14);
             this.txtcellphoneNumber.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtcellphoneNumber.CustomButton.TabIndex = 1;
             this.txtcellphoneNumber.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -272,8 +323,8 @@ namespace ProyectoNaranja
             this.txtcellphoneNumber.CustomButton.Visible = false;
             this.txtcellphoneNumber.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.timeBindingSource, "CellPhoneNumber", true));
             this.txtcellphoneNumber.Lines = new string[0];
-            this.txtcellphoneNumber.Location = new System.Drawing.Point(239, 125);
-            this.txtcellphoneNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.txtcellphoneNumber.Location = new System.Drawing.Point(239, 128);
+            this.txtcellphoneNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtcellphoneNumber.MaxLength = 32767;
             this.txtcellphoneNumber.Name = "txtcellphoneNumber";
             this.txtcellphoneNumber.PasswordChar = '\0';
@@ -291,7 +342,7 @@ namespace ProyectoNaranja
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(113, 158);
+            this.lblEmail.Location = new System.Drawing.Point(113, 161);
             this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(44, 19);
@@ -304,10 +355,10 @@ namespace ProyectoNaranja
             // 
             // 
             this.txtPhoneNumber.CustomButton.Image = null;
-            this.txtPhoneNumber.CustomButton.Location = new System.Drawing.Point(105, 1);
-            this.txtPhoneNumber.CustomButton.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPhoneNumber.CustomButton.Location = new System.Drawing.Point(79, 1);
+            this.txtPhoneNumber.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPhoneNumber.CustomButton.Name = "";
-            this.txtPhoneNumber.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.txtPhoneNumber.CustomButton.Size = new System.Drawing.Size(13, 14);
             this.txtPhoneNumber.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtPhoneNumber.CustomButton.TabIndex = 1;
             this.txtPhoneNumber.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -315,8 +366,8 @@ namespace ProyectoNaranja
             this.txtPhoneNumber.CustomButton.Visible = false;
             this.txtPhoneNumber.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.timeBindingSource, "PhoneNumber", true));
             this.txtPhoneNumber.Lines = new string[0];
-            this.txtPhoneNumber.Location = new System.Drawing.Point(239, 94);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(2);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(239, 104);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPhoneNumber.MaxLength = 32767;
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.PasswordChar = '\0';
@@ -334,7 +385,7 @@ namespace ProyectoNaranja
             // lblPhoneNumber
             // 
             this.lblPhoneNumber.AutoSize = true;
-            this.lblPhoneNumber.Location = new System.Drawing.Point(113, 94);
+            this.lblPhoneNumber.Location = new System.Drawing.Point(113, 102);
             this.lblPhoneNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
             this.lblPhoneNumber.Size = new System.Drawing.Size(103, 19);
@@ -347,19 +398,19 @@ namespace ProyectoNaranja
             // 
             // 
             this.txtName.CustomButton.Image = null;
-            this.txtName.CustomButton.Location = new System.Drawing.Point(149, 1);
-            this.txtName.CustomButton.Margin = new System.Windows.Forms.Padding(2);
+            this.txtName.CustomButton.Location = new System.Drawing.Point(112, 1);
+            this.txtName.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtName.CustomButton.Name = "";
-            this.txtName.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.txtName.CustomButton.Size = new System.Drawing.Size(13, 14);
             this.txtName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtName.CustomButton.TabIndex = 1;
             this.txtName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtName.CustomButton.UseSelectable = true;
             this.txtName.CustomButton.Visible = false;
-            this.txtName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.timeBindingSource, "FullName", true));
+            this.txtName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.timeBindingSource, "FirstName", true));
             this.txtName.Lines = new string[0];
             this.txtName.Location = new System.Drawing.Point(195, 59);
-            this.txtName.Margin = new System.Windows.Forms.Padding(2);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtName.MaxLength = 32767;
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
@@ -374,15 +425,15 @@ namespace ProyectoNaranja
             this.txtName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.txtName.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // lblName
+            // lblFirstName
             // 
-            this.lblName.AutoSize = true;
-            this.lblName.Location = new System.Drawing.Point(113, 59);
-            this.lblName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(48, 19);
-            this.lblName.TabIndex = 2;
-            this.lblName.Text = "Name:";
+            this.lblFirstName.AutoSize = true;
+            this.lblFirstName.Location = new System.Drawing.Point(113, 59);
+            this.lblFirstName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblFirstName.Name = "lblFirstName";
+            this.lblFirstName.Size = new System.Drawing.Size(72, 19);
+            this.lblFirstName.TabIndex = 2;
+            this.lblFirstName.Text = "FirstName:";
             // 
             // txtId
             // 
@@ -390,10 +441,10 @@ namespace ProyectoNaranja
             // 
             // 
             this.txtId.CustomButton.Image = null;
-            this.txtId.CustomButton.Location = new System.Drawing.Point(149, 1);
-            this.txtId.CustomButton.Margin = new System.Windows.Forms.Padding(2);
+            this.txtId.CustomButton.Location = new System.Drawing.Point(112, 1);
+            this.txtId.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtId.CustomButton.Name = "";
-            this.txtId.CustomButton.Size = new System.Drawing.Size(17, 17);
+            this.txtId.CustomButton.Size = new System.Drawing.Size(13, 14);
             this.txtId.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtId.CustomButton.TabIndex = 1;
             this.txtId.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -402,7 +453,7 @@ namespace ProyectoNaranja
             this.txtId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.timeBindingSource, "ID", true));
             this.txtId.Lines = new string[0];
             this.txtId.Location = new System.Drawing.Point(195, 29);
-            this.txtId.Margin = new System.Windows.Forms.Padding(2);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtId.MaxLength = 32767;
             this.txtId.Name = "txtId";
             this.txtId.PasswordChar = '\0';
@@ -435,14 +486,14 @@ namespace ProyectoNaranja
             this.grdDatos.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.grdDatos.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.grdDatos.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.grdDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grdDatos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.iDDataGridViewTextBoxColumn,
@@ -455,31 +506,32 @@ namespace ProyectoNaranja
             this.photoDataGridViewTextBoxColumn,
             this.fullNameDataGridViewTextBoxColumn});
             this.grdDatos.DataSource = this.timeBindingSource;
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.grdDatos.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.grdDatos.DefaultCellStyle = dataGridViewCellStyle5;
             this.grdDatos.EnableHeadersVisualStyles = false;
             this.grdDatos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grdDatos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.grdDatos.Location = new System.Drawing.Point(431, 86);
             this.grdDatos.Name = "grdDatos";
             this.grdDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.grdDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.grdDatos.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
+            this.grdDatos.RowHeadersWidth = 51;
             this.grdDatos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdDatos.Size = new System.Drawing.Size(435, 225);
+            this.grdDatos.Size = new System.Drawing.Size(733, 234);
             this.grdDatos.TabIndex = 21;
             this.grdDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDatos_CellClick);
             // 
@@ -487,66 +539,80 @@ namespace ProyectoNaranja
             // 
             this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
             this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.Width = 125;
             // 
             // firstNameDataGridViewTextBoxColumn
             // 
             this.firstNameDataGridViewTextBoxColumn.DataPropertyName = "FirstName";
             this.firstNameDataGridViewTextBoxColumn.HeaderText = "FirstName";
+            this.firstNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.firstNameDataGridViewTextBoxColumn.Name = "firstNameDataGridViewTextBoxColumn";
+            this.firstNameDataGridViewTextBoxColumn.Width = 125;
             // 
             // lastNameDataGridViewTextBoxColumn
             // 
             this.lastNameDataGridViewTextBoxColumn.DataPropertyName = "LastName";
             this.lastNameDataGridViewTextBoxColumn.HeaderText = "LastName";
+            this.lastNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.lastNameDataGridViewTextBoxColumn.Name = "lastNameDataGridViewTextBoxColumn";
+            this.lastNameDataGridViewTextBoxColumn.Width = 125;
             // 
             // phoneNumberDataGridViewTextBoxColumn
             // 
             this.phoneNumberDataGridViewTextBoxColumn.DataPropertyName = "PhoneNumber";
             this.phoneNumberDataGridViewTextBoxColumn.HeaderText = "PhoneNumber";
+            this.phoneNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.phoneNumberDataGridViewTextBoxColumn.Name = "phoneNumberDataGridViewTextBoxColumn";
+            this.phoneNumberDataGridViewTextBoxColumn.Width = 125;
             // 
             // cellPhoneNumberDataGridViewTextBoxColumn
             // 
             this.cellPhoneNumberDataGridViewTextBoxColumn.DataPropertyName = "CellPhoneNumber";
             this.cellPhoneNumberDataGridViewTextBoxColumn.HeaderText = "CellPhoneNumber";
+            this.cellPhoneNumberDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.cellPhoneNumberDataGridViewTextBoxColumn.Name = "cellPhoneNumberDataGridViewTextBoxColumn";
+            this.cellPhoneNumberDataGridViewTextBoxColumn.Width = 125;
             // 
             // correoDataGridViewTextBoxColumn
             // 
             this.correoDataGridViewTextBoxColumn.DataPropertyName = "Correo";
             this.correoDataGridViewTextBoxColumn.HeaderText = "Correo";
+            this.correoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.correoDataGridViewTextBoxColumn.Name = "correoDataGridViewTextBoxColumn";
+            this.correoDataGridViewTextBoxColumn.Width = 125;
             // 
             // departmentDataGridViewTextBoxColumn
             // 
             this.departmentDataGridViewTextBoxColumn.DataPropertyName = "Department";
             this.departmentDataGridViewTextBoxColumn.HeaderText = "Department";
+            this.departmentDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.departmentDataGridViewTextBoxColumn.Name = "departmentDataGridViewTextBoxColumn";
+            this.departmentDataGridViewTextBoxColumn.Width = 125;
             // 
             // photoDataGridViewTextBoxColumn
             // 
             this.photoDataGridViewTextBoxColumn.DataPropertyName = "Photo";
             this.photoDataGridViewTextBoxColumn.HeaderText = "Photo";
+            this.photoDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.photoDataGridViewTextBoxColumn.Name = "photoDataGridViewTextBoxColumn";
+            this.photoDataGridViewTextBoxColumn.Width = 125;
             // 
             // fullNameDataGridViewTextBoxColumn
             // 
             this.fullNameDataGridViewTextBoxColumn.DataPropertyName = "FullName";
             this.fullNameDataGridViewTextBoxColumn.HeaderText = "FullName";
+            this.fullNameDataGridViewTextBoxColumn.MinimumWidth = 6;
             this.fullNameDataGridViewTextBoxColumn.Name = "fullNameDataGridViewTextBoxColumn";
             this.fullNameDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // timeBindingSource
-            // 
-            this.timeBindingSource.DataSource = typeof(ProyectoNaranja.Entities.Time);
+            this.fullNameDataGridViewTextBoxColumn.Width = 125;
             // 
             // FrmTime
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(881, 450);
+            this.ClientSize = new System.Drawing.Size(1238, 487);
             this.Controls.Add(this.grdDatos);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
@@ -555,13 +621,13 @@ namespace ProyectoNaranja
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.pnlDatos);
             this.Name = "FrmTime";
-            this.Text = "FrmTime";
+            this.Text = "Time";
             this.Load += new System.EventHandler(this.FrmTime_Load);
             this.pnlDatos.ResumeLayout(false);
             this.pnlDatos.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.timeBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctPhoto)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timeBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -585,7 +651,7 @@ namespace ProyectoNaranja
         private MetroFramework.Controls.MetroTextBox txtPhoneNumber;
         private MetroFramework.Controls.MetroLabel lblPhoneNumber;
         private MetroFramework.Controls.MetroTextBox txtName;
-        private MetroFramework.Controls.MetroLabel lblName;
+        private MetroFramework.Controls.MetroLabel lblFirstName;
         private MetroFramework.Controls.MetroTextBox txtId;
         private MetroFramework.Controls.MetroLabel lblIabel;
         private MetroFramework.Controls.MetroGrid grdDatos;
@@ -599,5 +665,7 @@ namespace ProyectoNaranja
         private System.Windows.Forms.DataGridViewTextBoxColumn photoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn fullNameDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource timeBindingSource;
+        private MetroFramework.Controls.MetroTextBox txtLastName;
+        private MetroFramework.Controls.MetroLabel lblLastName;
     }
 }

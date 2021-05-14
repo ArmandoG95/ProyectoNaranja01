@@ -7,12 +7,15 @@
     {
         public override void Up()
         {
-            AddColumn("dbo.Coordinators", "PhoneNumber", c => c.String(maxLength: 30));
+            AlterColumn("dbo.Coordinators", "PhoneNumber", c => c.String(maxLength: 30));
+            AlterColumn("dbo.Students", "LastName", c => c.String(maxLength: 30));
         }
         
         public override void Down()
         {
-            DropColumn("dbo.Coordinators", "PhoneNumber");
+            AlterColumn("dbo.Coordinators", "LastName", c => c.String());
+            AlterColumn("dbo.Students", "PhoneNumber", c => c.String());
         }
     }
+    
 }
