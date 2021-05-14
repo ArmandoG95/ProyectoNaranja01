@@ -108,5 +108,28 @@ namespace ProyectoNaranja
                 }
             }
         }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            if (MetroFramework.MetroMessageBox.Show(this, "Quieres eliminar al asesor?") == DialogResult.OK)
+            {
+                using (DataContext dataContext = new DataContext())
+                {
+                    Time time = timeBindingSource.Current as Time;
+                    if (time != null)
+                    {
+                        if (dataContext.Entry<Time>(time).State == EntityState.Detached)
+                            dataContext.Set<Time>().Attach(time);
+                        dataContext.Entry<Time>(time).State = EntityState.Deleted;
+                        dataContext.SaveChanges();
+                        MetroFramework.MetroMessageBox.Show(this, "Datos Eliminados");
+                        timeBindingSource.RemoveCurrent();
+                        pctPhoto.Image = null;
+                        pnlDatos.Enabled = false;
+                    }
+                }
+
+            }
+        }
     }
 }
