@@ -75,7 +75,7 @@
                         LastName = c.String(maxLength: 30),
                         CellPhoneNumber = c.String(maxLength: 30),
                         PhoneNumber = c.String(maxLength: 30),
-                        Correo = c.String(),
+                        Correo = c.String(maxLength: 30),
                         Photo = c.String(maxLength: 30),
                     })
                 .PrimaryKey(t => t.ID);
