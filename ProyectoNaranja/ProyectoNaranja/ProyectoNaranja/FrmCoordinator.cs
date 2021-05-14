@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -90,7 +91,19 @@ namespace ProyectoNaranja
             {
                 using (DataContext dataContext = new DataContext())
                 {
+                    Coordinator coordinator = coordinatorBindingSource.Current as Coordinator;
+                    if (coordinator != null)
+                    {
+                        if (dataContext.Entry<Coordinator>(coordinator).State == EntityState.Detached)
+                            dataContext.Set<Coordinator>().Attach(coordinator);
+                        dataContext.Entry<Coordinator>(coordinator).State = EntityState.Deleted;
+                        dataContext.SaveChanges();
+                        MetroFramework.MetroMessageBox.Show(this, "Datos Eliminados");
+                        coordinatorBindingSource.RemoveCurrent();
+                        pctPhoto.Image = null;
+                        pnlDatos.Enabled = false;
 
+                    }
                 }
             }
         }
