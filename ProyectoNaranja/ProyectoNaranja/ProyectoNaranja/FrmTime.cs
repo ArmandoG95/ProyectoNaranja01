@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.Entity;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -80,6 +81,29 @@ namespace ProyectoNaranja
                         Time time = timeBindingSource.Current as Time;
                         if (time != null)
                             time.Photo = ofd.FileName;
+                    }
+                }
+            }
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            {
+                using (DataContext dataContext = new DataContext())
+                {
+                    Time time = timeBindingSource.Current as Time;
+                    if (time != null)
+                    {
+                        if (dataContext.Entry<Time>(time).State == EntityState.Detached)
+                            dataContext.Set<Time>().Attach(time);
+                        if (time.ID == 0)
+                            dataContext.Entry<Time>(time).State = EntityState.Added;
+                        else
+                            dataContext.Entry<Time>(time).State = EntityState.Modified;
+                        dataContext.SaveChanges();
+                        MetroFramework.MetroMessageBox.Show(this, "Datos guardados");
+                        grdDatos.Refresh();
+                        pnlDatos.Enabled = false;
                     }
                 }
             }
