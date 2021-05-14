@@ -37,7 +37,7 @@
             this.bttDelete = new MetroFramework.Controls.MetroButton();
             this.bttEdit = new MetroFramework.Controls.MetroButton();
             this.bttAdd = new MetroFramework.Controls.MetroButton();
-            this.pnlAdviser = new MetroFramework.Controls.MetroPanel();
+            this.pnlDatos = new MetroFramework.Controls.MetroPanel();
             this.btnSearch = new MetroFramework.Controls.MetroButton();
             this.txtEmail = new MetroFramework.Controls.MetroTextBox();
             this.txtCellPhoneNumber = new MetroFramework.Controls.MetroTextBox();
@@ -59,7 +59,7 @@
             this.photoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.coordinatorBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pnlAdviser.SuspendLayout();
+            this.pnlDatos.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctCoach)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdAdviser)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.coordinatorBindingSource)).BeginInit();
@@ -110,30 +110,30 @@
             this.bttAdd.Text = "Add";
             this.bttAdd.UseSelectable = true;
             // 
-            // pnlAdviser
+            // pnlDatos
             // 
-            this.pnlAdviser.Controls.Add(this.btnSearch);
-            this.pnlAdviser.Controls.Add(this.txtEmail);
-            this.pnlAdviser.Controls.Add(this.txtCellPhoneNumber);
-            this.pnlAdviser.Controls.Add(this.txtLastName);
-            this.pnlAdviser.Controls.Add(this.txtFirstName);
-            this.pnlAdviser.Controls.Add(this.txtID);
-            this.pnlAdviser.Controls.Add(this.lblEmail);
-            this.pnlAdviser.Controls.Add(this.lblCellPhoneNumber);
-            this.pnlAdviser.Controls.Add(this.lblLastName);
-            this.pnlAdviser.Controls.Add(this.lblFirtsName);
-            this.pnlAdviser.Controls.Add(this.lblID);
-            this.pnlAdviser.Controls.Add(this.pctCoach);
-            this.pnlAdviser.HorizontalScrollbarBarColor = true;
-            this.pnlAdviser.HorizontalScrollbarHighlightOnWheel = false;
-            this.pnlAdviser.HorizontalScrollbarSize = 10;
-            this.pnlAdviser.Location = new System.Drawing.Point(52, 108);
-            this.pnlAdviser.Name = "pnlAdviser";
-            this.pnlAdviser.Size = new System.Drawing.Size(686, 306);
-            this.pnlAdviser.TabIndex = 21;
-            this.pnlAdviser.VerticalScrollbarBarColor = true;
-            this.pnlAdviser.VerticalScrollbarHighlightOnWheel = false;
-            this.pnlAdviser.VerticalScrollbarSize = 10;
+            this.pnlDatos.Controls.Add(this.btnSearch);
+            this.pnlDatos.Controls.Add(this.txtEmail);
+            this.pnlDatos.Controls.Add(this.txtCellPhoneNumber);
+            this.pnlDatos.Controls.Add(this.txtLastName);
+            this.pnlDatos.Controls.Add(this.txtFirstName);
+            this.pnlDatos.Controls.Add(this.txtID);
+            this.pnlDatos.Controls.Add(this.lblEmail);
+            this.pnlDatos.Controls.Add(this.lblCellPhoneNumber);
+            this.pnlDatos.Controls.Add(this.lblLastName);
+            this.pnlDatos.Controls.Add(this.lblFirtsName);
+            this.pnlDatos.Controls.Add(this.lblID);
+            this.pnlDatos.Controls.Add(this.pctCoach);
+            this.pnlDatos.HorizontalScrollbarBarColor = true;
+            this.pnlDatos.HorizontalScrollbarHighlightOnWheel = false;
+            this.pnlDatos.HorizontalScrollbarSize = 10;
+            this.pnlDatos.Location = new System.Drawing.Point(52, 108);
+            this.pnlDatos.Name = "pnlDatos";
+            this.pnlDatos.Size = new System.Drawing.Size(686, 306);
+            this.pnlDatos.TabIndex = 21;
+            this.pnlDatos.VerticalScrollbarBarColor = true;
+            this.pnlDatos.VerticalScrollbarHighlightOnWheel = false;
+            this.pnlDatos.VerticalScrollbarSize = 10;
             // 
             // btnSearch
             // 
@@ -158,6 +158,7 @@
             this.txtEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtEmail.CustomButton.UseSelectable = true;
             this.txtEmail.CustomButton.Visible = false;
+            this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coordinatorBindingSource, "Correo", true));
             this.txtEmail.Lines = new string[0];
             this.txtEmail.Location = new System.Drawing.Point(382, 159);
             this.txtEmail.MaxLength = 32767;
@@ -188,6 +189,7 @@
             this.txtCellPhoneNumber.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
             this.txtCellPhoneNumber.CustomButton.UseSelectable = true;
             this.txtCellPhoneNumber.CustomButton.Visible = false;
+            this.txtCellPhoneNumber.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.coordinatorBindingSource, "CellPhoneNumber", true));
             this.txtCellPhoneNumber.Lines = new string[0];
             this.txtCellPhoneNumber.Location = new System.Drawing.Point(382, 126);
             this.txtCellPhoneNumber.MaxLength = 32767;
@@ -344,6 +346,7 @@
             // 
             // pctCoach
             // 
+            this.pctCoach.DataBindings.Add(new System.Windows.Forms.Binding("Image", this.coordinatorBindingSource, "Photo", true));
             this.pctCoach.Location = new System.Drawing.Point(25, 33);
             this.pctCoach.Name = "pctCoach";
             this.pctCoach.Size = new System.Drawing.Size(147, 149);
@@ -476,11 +479,12 @@
             this.Controls.Add(this.bttDelete);
             this.Controls.Add(this.bttEdit);
             this.Controls.Add(this.bttAdd);
-            this.Controls.Add(this.pnlAdviser);
+            this.Controls.Add(this.pnlDatos);
             this.Name = "FrmCoordinator";
             this.Text = "FrmCoordinator";
-            this.pnlAdviser.ResumeLayout(false);
-            this.pnlAdviser.PerformLayout();
+            this.Load += new System.EventHandler(this.FrmCoordinator_Load);
+            this.pnlDatos.ResumeLayout(false);
+            this.pnlDatos.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pctCoach)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.grdAdviser)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.coordinatorBindingSource)).EndInit();
@@ -495,7 +499,7 @@
         private MetroFramework.Controls.MetroButton bttDelete;
         private MetroFramework.Controls.MetroButton bttEdit;
         private MetroFramework.Controls.MetroButton bttAdd;
-        private MetroFramework.Controls.MetroPanel pnlAdviser;
+        private MetroFramework.Controls.MetroPanel pnlDatos;
         private MetroFramework.Controls.MetroButton btnSearch;
         private MetroFramework.Controls.MetroTextBox txtEmail;
         private MetroFramework.Controls.MetroTextBox txtCellPhoneNumber;

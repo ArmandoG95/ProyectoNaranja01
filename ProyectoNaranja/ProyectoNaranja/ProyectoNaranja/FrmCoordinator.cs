@@ -16,5 +16,14 @@ namespace ProyectoNaranja
         {
             InitializeComponent();
         }
+
+        private void FrmCoordinator_Load(object sender, EventArgs e)
+        {
+            using (DataContext dataContext = new DataContext())
+            {
+                coordinatorBindingSource.DataSource = dataContext.Students.ToList();
+            }
+            pnlDatos
+        }
     }
 }
