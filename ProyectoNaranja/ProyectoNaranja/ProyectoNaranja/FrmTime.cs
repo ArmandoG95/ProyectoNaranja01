@@ -65,5 +65,24 @@ namespace ProyectoNaranja
             else
                 pctPhoto.Image = null;
         }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            {
+                using (OpenFileDialog ofd = new OpenFileDialog()
+                {
+                    Filter = "archivos .JPG|*.jpg|todos los archivos|*.*"
+                })
+                {
+                    if (ofd.ShowDialog() == DialogResult.OK)
+                    {
+                        pctPhoto.Image = Image.FromFile(ofd.FileName);
+                        Time time = timeBindingSource.Current as Time;
+                        if (time != null)
+                            time.Photo = ofd.FileName;
+                    }
+                }
+            }
+        }
     }
 }
