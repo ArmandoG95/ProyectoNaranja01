@@ -38,6 +38,7 @@
             this.bttEdit = new MetroFramework.Controls.MetroButton();
             this.bttAdd = new MetroFramework.Controls.MetroButton();
             this.grdDatos = new MetroFramework.Controls.MetroGrid();
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnlDatos = new MetroFramework.Controls.MetroPanel();
             this.btnSearch = new MetroFramework.Controls.MetroButton();
             this.txtDeparment = new MetroFramework.Controls.MetroTextBox();
@@ -55,7 +56,6 @@
             this.lblFirtsName = new MetroFramework.Controls.MetroLabel();
             this.lblID = new MetroFramework.Controls.MetroLabel();
             this.pctPhoto = new System.Windows.Forms.PictureBox();
-            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fullNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.phoneNumberDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -156,7 +156,7 @@
             this.grdDatos.EnableHeadersVisualStyles = false;
             this.grdDatos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grdDatos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.grdDatos.Location = new System.Drawing.Point(727, 82);
+            this.grdDatos.Location = new System.Drawing.Point(720, 91);
             this.grdDatos.Name = "grdDatos";
             this.grdDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -171,9 +171,17 @@
             this.grdDatos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdDatos.RowTemplate.Height = 24;
             this.grdDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdDatos.Size = new System.Drawing.Size(931, 306);
+            this.grdDatos.Size = new System.Drawing.Size(876, 306);
             this.grdDatos.TabIndex = 8;
             this.grdDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDatos_CellClick);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Id";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            this.Id.Width = 125;
             // 
             // pnlDatos
             // 
@@ -220,9 +228,9 @@
             // 
             // 
             this.txtDeparment.CustomButton.Image = null;
-            this.txtDeparment.CustomButton.Location = new System.Drawing.Point(219, 1);
+            this.txtDeparment.CustomButton.Location = new System.Drawing.Point(195, 1);
             this.txtDeparment.CustomButton.Name = "";
-            this.txtDeparment.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtDeparment.CustomButton.Size = new System.Drawing.Size(19, 21);
             this.txtDeparment.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtDeparment.CustomButton.TabIndex = 1;
             this.txtDeparment.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -251,9 +259,9 @@
             // 
             // 
             this.txtEmail.CustomButton.Image = null;
-            this.txtEmail.CustomButton.Location = new System.Drawing.Point(219, 1);
+            this.txtEmail.CustomButton.Location = new System.Drawing.Point(195, 1);
             this.txtEmail.CustomButton.Name = "";
-            this.txtEmail.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtEmail.CustomButton.Size = new System.Drawing.Size(19, 21);
             this.txtEmail.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtEmail.CustomButton.TabIndex = 1;
             this.txtEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -282,9 +290,9 @@
             // 
             // 
             this.txtCellPhoneNumber.CustomButton.Image = null;
-            this.txtCellPhoneNumber.CustomButton.Location = new System.Drawing.Point(219, 1);
+            this.txtCellPhoneNumber.CustomButton.Location = new System.Drawing.Point(195, 1);
             this.txtCellPhoneNumber.CustomButton.Name = "";
-            this.txtCellPhoneNumber.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtCellPhoneNumber.CustomButton.Size = new System.Drawing.Size(19, 21);
             this.txtCellPhoneNumber.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtCellPhoneNumber.CustomButton.TabIndex = 1;
             this.txtCellPhoneNumber.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -313,9 +321,9 @@
             // 
             // 
             this.txtPhoneNumber.CustomButton.Image = null;
-            this.txtPhoneNumber.CustomButton.Location = new System.Drawing.Point(219, 1);
+            this.txtPhoneNumber.CustomButton.Location = new System.Drawing.Point(195, 1);
             this.txtPhoneNumber.CustomButton.Name = "";
-            this.txtPhoneNumber.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtPhoneNumber.CustomButton.Size = new System.Drawing.Size(19, 21);
             this.txtPhoneNumber.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtPhoneNumber.CustomButton.TabIndex = 1;
             this.txtPhoneNumber.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -344,9 +352,9 @@
             // 
             // 
             this.txtLastName.CustomButton.Image = null;
-            this.txtLastName.CustomButton.Location = new System.Drawing.Point(219, 1);
+            this.txtLastName.CustomButton.Location = new System.Drawing.Point(195, 1);
             this.txtLastName.CustomButton.Name = "";
-            this.txtLastName.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtLastName.CustomButton.Size = new System.Drawing.Size(19, 21);
             this.txtLastName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtLastName.CustomButton.TabIndex = 1;
             this.txtLastName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -375,9 +383,9 @@
             // 
             // 
             this.txtFirstName.CustomButton.Image = null;
-            this.txtFirstName.CustomButton.Location = new System.Drawing.Point(219, 1);
+            this.txtFirstName.CustomButton.Location = new System.Drawing.Point(195, 1);
             this.txtFirstName.CustomButton.Name = "";
-            this.txtFirstName.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtFirstName.CustomButton.Size = new System.Drawing.Size(19, 21);
             this.txtFirstName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtFirstName.CustomButton.TabIndex = 1;
             this.txtFirstName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -406,9 +414,9 @@
             // 
             // 
             this.txtID.CustomButton.Image = null;
-            this.txtID.CustomButton.Location = new System.Drawing.Point(219, 1);
+            this.txtID.CustomButton.Location = new System.Drawing.Point(195, 1);
             this.txtID.CustomButton.Name = "";
-            this.txtID.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtID.CustomButton.Size = new System.Drawing.Size(19, 21);
             this.txtID.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtID.CustomButton.TabIndex = 1;
             this.txtID.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -503,14 +511,6 @@
             this.pctPhoto.TabIndex = 2;
             this.pctPhoto.TabStop = false;
             // 
-            // Id
-            // 
-            this.Id.DataPropertyName = "Id";
-            this.Id.HeaderText = "Id";
-            this.Id.MinimumWidth = 6;
-            this.Id.Name = "Id";
-            this.Id.Width = 125;
-            // 
             // fullNameDataGridViewTextBoxColumn
             // 
             this.fullNameDataGridViewTextBoxColumn.DataPropertyName = "FullName";
@@ -568,7 +568,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1713, 557);
+            this.ClientSize = new System.Drawing.Size(1619, 557);
             this.Controls.Add(this.bttSave);
             this.Controls.Add(this.bttCancel);
             this.Controls.Add(this.bttDelete);
@@ -576,7 +576,10 @@
             this.Controls.Add(this.bttAdd);
             this.Controls.Add(this.grdDatos);
             this.Controls.Add(this.pnlDatos);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "FrmAdviser";
+            this.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.RightToLeftLayout = true;
             this.Text = "Adviser";
             this.Load += new System.EventHandler(this.FrmAdviser_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grdDatos)).EndInit();
