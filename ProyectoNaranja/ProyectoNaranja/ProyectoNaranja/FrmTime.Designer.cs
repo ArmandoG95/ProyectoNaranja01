@@ -74,10 +74,10 @@ namespace ProyectoNaranja
             // 
             // btnDelete
             // 
-            this.btnDelete.Location = new System.Drawing.Point(452, 395);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Location = new System.Drawing.Point(339, 321);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(75, 23);
+            this.btnDelete.Size = new System.Drawing.Size(56, 19);
             this.btnDelete.TabIndex = 20;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseSelectable = true;
@@ -85,10 +85,10 @@ namespace ProyectoNaranja
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(371, 395);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdd.Location = new System.Drawing.Point(278, 321);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 23);
+            this.btnAdd.Size = new System.Drawing.Size(56, 19);
             this.btnAdd.TabIndex = 19;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseSelectable = true;
@@ -96,10 +96,10 @@ namespace ProyectoNaranja
             // 
             // btnCancel
             // 
-            this.btnCancel.Location = new System.Drawing.Point(289, 395);
-            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnCancel.Location = new System.Drawing.Point(217, 321);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 23);
+            this.btnCancel.Size = new System.Drawing.Size(56, 19);
             this.btnCancel.TabIndex = 18;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseSelectable = true;
@@ -107,10 +107,10 @@ namespace ProyectoNaranja
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(208, 395);
-            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSave.Location = new System.Drawing.Point(156, 321);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(75, 23);
+            this.btnSave.Size = new System.Drawing.Size(56, 19);
             this.btnSave.TabIndex = 17;
             this.btnSave.Text = "Save";
             this.btnSave.UseSelectable = true;
@@ -118,10 +118,10 @@ namespace ProyectoNaranja
             // 
             // btnEdit
             // 
-            this.btnEdit.Location = new System.Drawing.Point(127, 395);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEdit.Location = new System.Drawing.Point(95, 321);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(75, 23);
+            this.btnEdit.Size = new System.Drawing.Size(56, 19);
             this.btnEdit.TabIndex = 16;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseSelectable = true;
@@ -147,15 +147,15 @@ namespace ProyectoNaranja
             this.pnlDatos.Controls.Add(this.lblIabel);
             this.pnlDatos.HorizontalScrollbarBarColor = true;
             this.pnlDatos.HorizontalScrollbarHighlightOnWheel = false;
-            this.pnlDatos.HorizontalScrollbarSize = 10;
-            this.pnlDatos.Location = new System.Drawing.Point(29, 106);
-            this.pnlDatos.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pnlDatos.HorizontalScrollbarSize = 8;
+            this.pnlDatos.Location = new System.Drawing.Point(22, 86);
+            this.pnlDatos.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pnlDatos.Name = "pnlDatos";
-            this.pnlDatos.Size = new System.Drawing.Size(496, 277);
+            this.pnlDatos.Size = new System.Drawing.Size(372, 225);
             this.pnlDatos.TabIndex = 15;
             this.pnlDatos.VerticalScrollbarBarColor = true;
             this.pnlDatos.VerticalScrollbarHighlightOnWheel = false;
-            this.pnlDatos.VerticalScrollbarSize = 11;
+            this.pnlDatos.VerticalScrollbarSize = 8;
             // 
             // txtLastName
             // 
@@ -163,10 +163,10 @@ namespace ProyectoNaranja
             // 
             // 
             this.txtLastName.CustomButton.Image = null;
-            this.txtLastName.CustomButton.Location = new System.Drawing.Point(201, 1);
-            this.txtLastName.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLastName.CustomButton.Location = new System.Drawing.Point(112, 1);
+            this.txtLastName.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtLastName.CustomButton.Name = "";
-            this.txtLastName.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtLastName.CustomButton.Size = new System.Drawing.Size(13, 14);
             this.txtLastName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtLastName.CustomButton.TabIndex = 1;
             this.txtLastName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -174,8 +174,8 @@ namespace ProyectoNaranja
             this.txtLastName.CustomButton.Visible = false;
             this.txtLastName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.timeBindingSource, "LastName", true));
             this.txtLastName.Lines = new string[0];
-            this.txtLastName.Location = new System.Drawing.Point(260, 101);
-            this.txtLastName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtLastName.Location = new System.Drawing.Point(195, 82);
+            this.txtLastName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtLastName.MaxLength = 32767;
             this.txtLastName.Name = "txtLastName";
             this.txtLastName.PasswordChar = '\0';
@@ -184,7 +184,7 @@ namespace ProyectoNaranja
             this.txtLastName.SelectionLength = 0;
             this.txtLastName.SelectionStart = 0;
             this.txtLastName.ShortcutsEnabled = true;
-            this.txtLastName.Size = new System.Drawing.Size(223, 23);
+            this.txtLastName.Size = new System.Drawing.Size(167, 19);
             this.txtLastName.TabIndex = 16;
             this.txtLastName.UseSelectable = true;
             this.txtLastName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -197,9 +197,10 @@ namespace ProyectoNaranja
             // lblLastName
             // 
             this.lblLastName.AutoSize = true;
-            this.lblLastName.Location = new System.Drawing.Point(151, 101);
+            this.lblLastName.Location = new System.Drawing.Point(113, 82);
+            this.lblLastName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblLastName.Name = "lblLastName";
-            this.lblLastName.Size = new System.Drawing.Size(74, 20);
+            this.lblLastName.Size = new System.Drawing.Size(70, 19);
             this.lblLastName.TabIndex = 15;
             this.lblLastName.Text = "LastName:";
             // 
@@ -209,10 +210,9 @@ namespace ProyectoNaranja
             // 
             // 
             this.txtDepartment.CustomButton.Image = null;
-            this.txtDepartment.CustomButton.Location = new System.Drawing.Point(147, 2);
-            this.txtDepartment.CustomButton.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDepartment.CustomButton.Location = new System.Drawing.Point(81, 1);
             this.txtDepartment.CustomButton.Name = "";
-            this.txtDepartment.CustomButton.Size = new System.Drawing.Size(23, 23);
+            this.txtDepartment.CustomButton.Size = new System.Drawing.Size(16, 17);
             this.txtDepartment.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtDepartment.CustomButton.TabIndex = 1;
             this.txtDepartment.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -220,8 +220,7 @@ namespace ProyectoNaranja
             this.txtDepartment.CustomButton.Visible = false;
             this.txtDepartment.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.timeBindingSource, "Department", true));
             this.txtDepartment.Lines = new string[0];
-            this.txtDepartment.Location = new System.Drawing.Point(310, 234);
-            this.txtDepartment.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDepartment.Location = new System.Drawing.Point(232, 190);
             this.txtDepartment.MaxLength = 32767;
             this.txtDepartment.Name = "txtDepartment";
             this.txtDepartment.PasswordChar = '\0';
@@ -230,7 +229,7 @@ namespace ProyectoNaranja
             this.txtDepartment.SelectionLength = 0;
             this.txtDepartment.SelectionStart = 0;
             this.txtDepartment.ShortcutsEnabled = true;
-            this.txtDepartment.Size = new System.Drawing.Size(173, 28);
+            this.txtDepartment.Size = new System.Drawing.Size(130, 23);
             this.txtDepartment.TabIndex = 14;
             this.txtDepartment.UseSelectable = true;
             this.txtDepartment.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -239,29 +238,27 @@ namespace ProyectoNaranja
             // lblHours
             // 
             this.lblHours.AutoSize = true;
-            this.lblHours.Location = new System.Drawing.Point(151, 234);
-            this.lblHours.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblHours.Location = new System.Drawing.Point(113, 190);
             this.lblHours.Name = "lblHours";
-            this.lblHours.Size = new System.Drawing.Size(46, 20);
+            this.lblHours.Size = new System.Drawing.Size(43, 19);
             this.lblHours.TabIndex = 13;
             this.lblHours.Text = "Hours";
             // 
             // lblcellphoneNumber
             // 
             this.lblcellphoneNumber.AutoSize = true;
-            this.lblcellphoneNumber.Location = new System.Drawing.Point(151, 158);
-            this.lblcellphoneNumber.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblcellphoneNumber.Location = new System.Drawing.Point(113, 128);
             this.lblcellphoneNumber.Name = "lblcellphoneNumber";
-            this.lblcellphoneNumber.Size = new System.Drawing.Size(122, 20);
+            this.lblcellphoneNumber.Size = new System.Drawing.Size(114, 19);
             this.lblcellphoneNumber.TabIndex = 12;
             this.lblcellphoneNumber.Text = "cellphoneNumber";
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(13, 190);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Location = new System.Drawing.Point(10, 154);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(131, 27);
+            this.btnSearch.Size = new System.Drawing.Size(98, 22);
             this.btnSearch.TabIndex = 11;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseSelectable = true;
@@ -269,10 +266,10 @@ namespace ProyectoNaranja
             // 
             // pctPhoto
             // 
-            this.pctPhoto.Location = new System.Drawing.Point(13, 36);
-            this.pctPhoto.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.pctPhoto.Location = new System.Drawing.Point(10, 29);
+            this.pctPhoto.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.pctPhoto.Name = "pctPhoto";
-            this.pctPhoto.Size = new System.Drawing.Size(132, 142);
+            this.pctPhoto.Size = new System.Drawing.Size(99, 115);
             this.pctPhoto.TabIndex = 10;
             this.pctPhoto.TabStop = false;
             // 
@@ -282,10 +279,10 @@ namespace ProyectoNaranja
             // 
             // 
             this.txtEmail.CustomButton.Image = null;
-            this.txtEmail.CustomButton.Location = new System.Drawing.Point(151, 1);
-            this.txtEmail.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmail.CustomButton.Location = new System.Drawing.Point(84, 1);
+            this.txtEmail.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEmail.CustomButton.Name = "";
-            this.txtEmail.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtEmail.CustomButton.Size = new System.Drawing.Size(13, 14);
             this.txtEmail.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtEmail.CustomButton.TabIndex = 1;
             this.txtEmail.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -293,8 +290,8 @@ namespace ProyectoNaranja
             this.txtEmail.CustomButton.Visible = false;
             this.txtEmail.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.timeBindingSource, "Correo", true));
             this.txtEmail.Lines = new string[0];
-            this.txtEmail.Location = new System.Drawing.Point(310, 198);
-            this.txtEmail.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtEmail.Location = new System.Drawing.Point(232, 161);
+            this.txtEmail.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtEmail.MaxLength = 32767;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.PasswordChar = '\0';
@@ -303,7 +300,7 @@ namespace ProyectoNaranja
             this.txtEmail.SelectionLength = 0;
             this.txtEmail.SelectionStart = 0;
             this.txtEmail.ShortcutsEnabled = true;
-            this.txtEmail.Size = new System.Drawing.Size(173, 23);
+            this.txtEmail.Size = new System.Drawing.Size(130, 19);
             this.txtEmail.TabIndex = 9;
             this.txtEmail.UseSelectable = true;
             this.txtEmail.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -315,10 +312,10 @@ namespace ProyectoNaranja
             // 
             // 
             this.txtcellphoneNumber.CustomButton.Image = null;
-            this.txtcellphoneNumber.CustomButton.Location = new System.Drawing.Point(142, 1);
-            this.txtcellphoneNumber.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtcellphoneNumber.CustomButton.Location = new System.Drawing.Point(79, 1);
+            this.txtcellphoneNumber.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtcellphoneNumber.CustomButton.Name = "";
-            this.txtcellphoneNumber.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtcellphoneNumber.CustomButton.Size = new System.Drawing.Size(13, 14);
             this.txtcellphoneNumber.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtcellphoneNumber.CustomButton.TabIndex = 1;
             this.txtcellphoneNumber.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -326,8 +323,8 @@ namespace ProyectoNaranja
             this.txtcellphoneNumber.CustomButton.Visible = false;
             this.txtcellphoneNumber.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.timeBindingSource, "CellPhoneNumber", true));
             this.txtcellphoneNumber.Lines = new string[0];
-            this.txtcellphoneNumber.Location = new System.Drawing.Point(319, 158);
-            this.txtcellphoneNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtcellphoneNumber.Location = new System.Drawing.Point(239, 128);
+            this.txtcellphoneNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtcellphoneNumber.MaxLength = 32767;
             this.txtcellphoneNumber.Name = "txtcellphoneNumber";
             this.txtcellphoneNumber.PasswordChar = '\0';
@@ -336,7 +333,7 @@ namespace ProyectoNaranja
             this.txtcellphoneNumber.SelectionLength = 0;
             this.txtcellphoneNumber.SelectionStart = 0;
             this.txtcellphoneNumber.ShortcutsEnabled = true;
-            this.txtcellphoneNumber.Size = new System.Drawing.Size(164, 23);
+            this.txtcellphoneNumber.Size = new System.Drawing.Size(123, 19);
             this.txtcellphoneNumber.TabIndex = 7;
             this.txtcellphoneNumber.UseSelectable = true;
             this.txtcellphoneNumber.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -345,9 +342,10 @@ namespace ProyectoNaranja
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
-            this.lblEmail.Location = new System.Drawing.Point(151, 198);
+            this.lblEmail.Location = new System.Drawing.Point(113, 161);
+            this.lblEmail.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblEmail.Name = "lblEmail";
-            this.lblEmail.Size = new System.Drawing.Size(45, 20);
+            this.lblEmail.Size = new System.Drawing.Size(44, 19);
             this.lblEmail.TabIndex = 6;
             this.lblEmail.Text = "Email:";
             // 
@@ -357,10 +355,10 @@ namespace ProyectoNaranja
             // 
             // 
             this.txtPhoneNumber.CustomButton.Image = null;
-            this.txtPhoneNumber.CustomButton.Location = new System.Drawing.Point(142, 1);
-            this.txtPhoneNumber.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPhoneNumber.CustomButton.Location = new System.Drawing.Point(79, 1);
+            this.txtPhoneNumber.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPhoneNumber.CustomButton.Name = "";
-            this.txtPhoneNumber.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtPhoneNumber.CustomButton.Size = new System.Drawing.Size(13, 14);
             this.txtPhoneNumber.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtPhoneNumber.CustomButton.TabIndex = 1;
             this.txtPhoneNumber.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -368,8 +366,8 @@ namespace ProyectoNaranja
             this.txtPhoneNumber.CustomButton.Visible = false;
             this.txtPhoneNumber.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.timeBindingSource, "PhoneNumber", true));
             this.txtPhoneNumber.Lines = new string[0];
-            this.txtPhoneNumber.Location = new System.Drawing.Point(319, 128);
-            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPhoneNumber.Location = new System.Drawing.Point(239, 104);
+            this.txtPhoneNumber.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtPhoneNumber.MaxLength = 32767;
             this.txtPhoneNumber.Name = "txtPhoneNumber";
             this.txtPhoneNumber.PasswordChar = '\0';
@@ -378,7 +376,7 @@ namespace ProyectoNaranja
             this.txtPhoneNumber.SelectionLength = 0;
             this.txtPhoneNumber.SelectionStart = 0;
             this.txtPhoneNumber.ShortcutsEnabled = true;
-            this.txtPhoneNumber.Size = new System.Drawing.Size(164, 23);
+            this.txtPhoneNumber.Size = new System.Drawing.Size(123, 19);
             this.txtPhoneNumber.TabIndex = 5;
             this.txtPhoneNumber.UseSelectable = true;
             this.txtPhoneNumber.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -387,9 +385,10 @@ namespace ProyectoNaranja
             // lblPhoneNumber
             // 
             this.lblPhoneNumber.AutoSize = true;
-            this.lblPhoneNumber.Location = new System.Drawing.Point(151, 126);
+            this.lblPhoneNumber.Location = new System.Drawing.Point(113, 102);
+            this.lblPhoneNumber.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblPhoneNumber.Name = "lblPhoneNumber";
-            this.lblPhoneNumber.Size = new System.Drawing.Size(109, 20);
+            this.lblPhoneNumber.Size = new System.Drawing.Size(103, 19);
             this.lblPhoneNumber.TabIndex = 4;
             this.lblPhoneNumber.Text = "Phone Number:";
             // 
@@ -399,10 +398,10 @@ namespace ProyectoNaranja
             // 
             // 
             this.txtName.CustomButton.Image = null;
-            this.txtName.CustomButton.Location = new System.Drawing.Point(201, 1);
-            this.txtName.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtName.CustomButton.Location = new System.Drawing.Point(112, 1);
+            this.txtName.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtName.CustomButton.Name = "";
-            this.txtName.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtName.CustomButton.Size = new System.Drawing.Size(13, 14);
             this.txtName.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtName.CustomButton.TabIndex = 1;
             this.txtName.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -410,8 +409,8 @@ namespace ProyectoNaranja
             this.txtName.CustomButton.Visible = false;
             this.txtName.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.timeBindingSource, "FirstName", true));
             this.txtName.Lines = new string[0];
-            this.txtName.Location = new System.Drawing.Point(260, 73);
-            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtName.Location = new System.Drawing.Point(195, 59);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtName.MaxLength = 32767;
             this.txtName.Name = "txtName";
             this.txtName.PasswordChar = '\0';
@@ -420,7 +419,7 @@ namespace ProyectoNaranja
             this.txtName.SelectionLength = 0;
             this.txtName.SelectionStart = 0;
             this.txtName.ShortcutsEnabled = true;
-            this.txtName.Size = new System.Drawing.Size(223, 23);
+            this.txtName.Size = new System.Drawing.Size(167, 19);
             this.txtName.TabIndex = 3;
             this.txtName.UseSelectable = true;
             this.txtName.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -429,9 +428,10 @@ namespace ProyectoNaranja
             // lblFirstName
             // 
             this.lblFirstName.AutoSize = true;
-            this.lblFirstName.Location = new System.Drawing.Point(151, 73);
+            this.lblFirstName.Location = new System.Drawing.Point(113, 59);
+            this.lblFirstName.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblFirstName.Name = "lblFirstName";
-            this.lblFirstName.Size = new System.Drawing.Size(75, 20);
+            this.lblFirstName.Size = new System.Drawing.Size(72, 19);
             this.lblFirstName.TabIndex = 2;
             this.lblFirstName.Text = "FirstName:";
             // 
@@ -441,10 +441,10 @@ namespace ProyectoNaranja
             // 
             // 
             this.txtId.CustomButton.Image = null;
-            this.txtId.CustomButton.Location = new System.Drawing.Point(201, 1);
-            this.txtId.CustomButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtId.CustomButton.Location = new System.Drawing.Point(112, 1);
+            this.txtId.CustomButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtId.CustomButton.Name = "";
-            this.txtId.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.txtId.CustomButton.Size = new System.Drawing.Size(13, 14);
             this.txtId.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
             this.txtId.CustomButton.TabIndex = 1;
             this.txtId.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
@@ -452,8 +452,8 @@ namespace ProyectoNaranja
             this.txtId.CustomButton.Visible = false;
             this.txtId.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.timeBindingSource, "ID", true));
             this.txtId.Lines = new string[0];
-            this.txtId.Location = new System.Drawing.Point(260, 36);
-            this.txtId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtId.Location = new System.Drawing.Point(195, 29);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.txtId.MaxLength = 32767;
             this.txtId.Name = "txtId";
             this.txtId.PasswordChar = '\0';
@@ -462,7 +462,7 @@ namespace ProyectoNaranja
             this.txtId.SelectionLength = 0;
             this.txtId.SelectionStart = 0;
             this.txtId.ShortcutsEnabled = true;
-            this.txtId.Size = new System.Drawing.Size(223, 23);
+            this.txtId.Size = new System.Drawing.Size(167, 19);
             this.txtId.TabIndex = 1;
             this.txtId.UseSelectable = true;
             this.txtId.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
@@ -471,9 +471,10 @@ namespace ProyectoNaranja
             // lblIabel
             // 
             this.lblIabel.AutoSize = true;
-            this.lblIabel.Location = new System.Drawing.Point(151, 36);
+            this.lblIabel.Location = new System.Drawing.Point(113, 29);
+            this.lblIabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblIabel.Name = "lblIabel";
-            this.lblIabel.Size = new System.Drawing.Size(23, 20);
+            this.lblIabel.Size = new System.Drawing.Size(23, 19);
             this.lblIabel.TabIndex = 0;
             this.lblIabel.Text = "Id:";
             // 
@@ -516,8 +517,7 @@ namespace ProyectoNaranja
             this.grdDatos.EnableHeadersVisualStyles = false;
             this.grdDatos.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
             this.grdDatos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.grdDatos.Location = new System.Drawing.Point(575, 106);
-            this.grdDatos.Margin = new System.Windows.Forms.Padding(4);
+            this.grdDatos.Location = new System.Drawing.Point(431, 86);
             this.grdDatos.Name = "grdDatos";
             this.grdDatos.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -531,7 +531,7 @@ namespace ProyectoNaranja
             this.grdDatos.RowHeadersWidth = 51;
             this.grdDatos.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
             this.grdDatos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.grdDatos.Size = new System.Drawing.Size(580, 277);
+            this.grdDatos.Size = new System.Drawing.Size(733, 234);
             this.grdDatos.TabIndex = 21;
             this.grdDatos.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.grdDatos_CellClick);
             // 
@@ -610,9 +610,9 @@ namespace ProyectoNaranja
             // 
             // FrmTime
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1175, 554);
+            this.ClientSize = new System.Drawing.Size(1238, 487);
             this.Controls.Add(this.grdDatos);
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.btnAdd);
@@ -620,9 +620,7 @@ namespace ProyectoNaranja
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.pnlDatos);
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmTime";
-            this.Padding = new System.Windows.Forms.Padding(27, 74, 27, 25);
             this.Text = "Time";
             this.Load += new System.EventHandler(this.FrmTime_Load);
             this.pnlDatos.ResumeLayout(false);
