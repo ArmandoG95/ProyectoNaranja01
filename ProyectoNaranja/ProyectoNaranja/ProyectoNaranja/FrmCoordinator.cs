@@ -107,5 +107,28 @@ namespace ProyectoNaranja
                 }
             }
         }
+
+        private void bttSave_Click(object sender, EventArgs e)
+        {
+            {
+                using (DataContext dataContext = new DataContext())
+                {
+                    Coordinator coordinator = coordinatorBindingSource.Current as Coordinator;
+                    if (coordinator != null)
+                    {
+                        if (dataContext.Entry<Coordinator>(coordinator).State == EntityState.Detached)
+                            dataContext.Set<Coordinator>().Attach(coordinator);
+                        if (coordinator.ID == 0)
+                            dataContext.Entry<Coordinator>(coordinator).State = EntityState.Added;
+                        else
+                            dataContext.Entry<Coordinator>(coordinator).State = EntityState.Modified;
+                        dataContext.SaveChanges();
+                        MetroFramework.MetroMessageBox.Show(this, "Datos guardados");
+                        grdDatos.Refresh();
+                        pnlDatos.Enabled = false;
+                    }
+                }
+            }
+        }
     }
 }
